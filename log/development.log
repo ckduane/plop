@@ -1,0 +1,136 @@
+  [1m[36m (18.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.6ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20161207200621)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (18.7ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "username" character varying NOT NULL, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "points" integer DEFAULT 0, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20161207200621"]]
+  [1m[36m (15.9ms)[0m  [1mCOMMIT[0m
+Migrating to CreateReviews (20161207200809)
+  [1m[35m (15.5ms)[0m  BEGIN
+  [1m[36m (2.5ms)[0m  [1mCREATE TABLE "reviews" ("id" serial primary key, "outlet_rating" integer NOT NULL, "wifi_rating" integer NOT NULL, "seating_rating" integer NOT NULL, "parking_rating" integer NOT NULL, "atmosphere" integer NOT NULL, "user_id" integer NOT NULL, "restaurant_id" integer NOT NULL, "comments" text NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20161207200809"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRestaurants (20161207201121)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.5ms)[0m  [1mCREATE TABLE "restaurants" ("id" serial primary key, "name" character varying NOT NULL, "phone_number" character varying, "address" character varying NOT NULL, "link" character varying, "hours_of_op" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20161207201121"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateFavorites (20161207201142)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "favorites" ("id" serial primary key, "user_id" integer NOT NULL, "restaurant_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20161207201142"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.0ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'favorites'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.5ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'restaurants'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.5ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'reviews'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.5ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Ori' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'ori@gmail.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Ori"], ["email", "ori@gmail.com"], ["password_digest", "$2a$10$3kGYDGWwiLwvo099yGLuZ.ZdcIUetZ31g1/Hx2qmbBQFDdjO.Oooi"], ["created_at", "2016-12-07 22:56:39.293540"], ["updated_at", "2016-12-07 22:56:39.293540"]]
+  [1m[35m (15.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'matt@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["username", "Matt"], ["email", "matt@gmail.com"], ["password_digest", "$2a$10$LaOBExBzwUjnXDO8UH.swejpQA1Phpp.MPvq0IBfunFjwtmClwomC"], ["created_at", "2016-12-07 22:56:39.379263"], ["updated_at", "2016-12-07 22:56:39.379263"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Christine' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'christine@gmail.com' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Christine"], ["email", "christine@gmail.com"], ["password_digest", "$2a$10$kaqxvhBYxK9p5kOn/14Hwe4x9MAhNKmA8qBoLZQh3gO.g0.F8O1ZO"], ["created_at", "2016-12-07 22:56:39.448734"], ["updated_at", "2016-12-07 22:56:39.448734"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'Keith' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'keith@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["username", "Keith"], ["email", "keith@gmail.com"], ["password_digest", "$2a$10$8malWoUN7KuelmX/uS6Wyu1HCwhUe9QEawnZSCnp/uH9pgZTD.JNa"], ["created_at", "2016-12-07 22:56:39.518082"], ["updated_at", "2016-12-07 22:56:39.518082"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (11.4ms)[0m  [1mINSERT INTO "restaurants" ("name", "phone_number", "address", "link", "hours_of_op", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Young Hickory"], ["phone_number", "(619) 795-6574"], ["address", "4096 30th St., San Diego, CA 92104"], ["link", "www.younghickory.com"], ["hours_of_op", "7AM - 12AM"], ["created_at", "2016-12-07 22:56:39.528754"], ["updated_at", "2016-12-07 22:56:39.528754"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("name", "phone_number", "address", "link", "hours_of_op", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Tea & Coffee Collective"], ["phone_number", "(619) 564-8086"], ["address", "631 Ninth Ave, San Diego, CA 92101"], ["link", "www.coffeeandteacollective.com"], ["hours_of_op", "7AM - 4PM"], ["created_at", "2016-12-07 22:56:39.542812"], ["updated_at", "2016-12-07 22:56:39.542812"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "restaurants" ("name", "phone_number", "address", "link", "hours_of_op", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Starbucks"], ["phone_number", "(619) 693-3750"], ["address", "1011 Market St., San Diego, CA 92101"], ["link", "www.starbucks.com"], ["hours_of_op", "5AM - 9PM"], ["created_at", "2016-12-07 22:56:39.544933"], ["updated_at", "2016-12-07 22:56:39.544933"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "restaurants" ("name", "phone_number", "address", "link", "hours_of_op", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Lofty"], ["phone_number", "(760) 230-6747"], ["address", "132 S Cedros Ave., Solana Beach, CA 92075"], ["link", "www.loftycoffee.com"], ["hours_of_op", "6AM - 6PM"], ["created_at", "2016-12-07 22:56:39.577562"], ["updated_at", "2016-12-07 22:56:39.577562"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "reviews" ("outlet_rating", "wifi_rating", "seating_rating", "parking_rating", "atmosphere", "user_id", "restaurant_id", "comments", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["outlet_rating", 4], ["wifi_rating", 4], ["seating_rating", 5], ["parking_rating", 4], ["atmosphere", 5], ["user_id", 1], ["restaurant_id", 1], ["comments", "Cool place, great vibe!"], ["created_at", "2016-12-07 22:56:39.591894"], ["updated_at", "2016-12-07 22:56:39.591894"]]
+  [1m[35m (15.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "reviews" ("outlet_rating", "wifi_rating", "seating_rating", "parking_rating", "atmosphere", "user_id", "restaurant_id", "comments", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["outlet_rating", 5], ["wifi_rating", 5], ["seating_rating", 4], ["parking_rating", 3], ["atmosphere", 4], ["user_id", 2], ["restaurant_id", 2], ["comments", "They have outlets on the tables!! Good coffee too."], ["created_at", "2016-12-07 22:56:39.609706"], ["updated_at", "2016-12-07 22:56:39.609706"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "reviews" ("outlet_rating", "wifi_rating", "seating_rating", "parking_rating", "atmosphere", "user_id", "restaurant_id", "comments", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["outlet_rating", 3], ["wifi_rating", 3], ["seating_rating", 3], ["parking_rating", 4], ["atmosphere", 3], ["user_id", 3], ["restaurant_id", 3], ["comments", "Best thing is, you know exactly what you're getting."], ["created_at", "2016-12-07 22:56:39.611740"], ["updated_at", "2016-12-07 22:56:39.611740"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "reviews" ("outlet_rating", "wifi_rating", "seating_rating", "parking_rating", "atmosphere", "user_id", "restaurant_id", "comments", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["outlet_rating", 3], ["wifi_rating", 2], ["seating_rating", 3], ["parking_rating", 5], ["atmosphere", 2], ["user_id", 4], ["restaurant_id", 4], ["comments", "Great place to get some work done."], ["created_at", "2016-12-07 22:56:39.613698"], ["updated_at", "2016-12-07 22:56:39.613698"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "favorites" ("user_id", "restaurant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 4], ["restaurant_id", 1], ["created_at", "2016-12-07 22:56:39.621127"], ["updated_at", "2016-12-07 22:56:39.621127"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "favorites" ("user_id", "restaurant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["user_id", 3], ["restaurant_id", 2], ["created_at", "2016-12-07 22:56:39.623862"], ["updated_at", "2016-12-07 22:56:39.623862"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "favorites" ("user_id", "restaurant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["restaurant_id", 3], ["created_at", "2016-12-07 22:56:39.625574"], ["updated_at", "2016-12-07 22:56:39.625574"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "favorites" ("user_id", "restaurant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["user_id", 1], ["restaurant_id", 4], ["created_at", "2016-12-07 22:56:39.627231"], ["updated_at", "2016-12-07 22:56:39.627231"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mReview Load (0.3ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35mFavorite Load (0.2ms)[0m  SELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1  [["user_id", 1]]
