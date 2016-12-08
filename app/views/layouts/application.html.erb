@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Okmc</title>
+  <title>Plop</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <nav>
+    <ul>
+      <li><%= link_to "Home", root_path %></li>
+      <% if session[:user_id].nil? %>
+        <li><%= link_to "Register", user_register_path %></li>
+        <li><%= link_to "Login", user_login_path %></li>
+      <% else %>
+        <li><%= link_to @user.username, user_profile_path %></li>
+        <li><%= link_to "Log Out", user_logout_path %></li>
+      <% end %>
+    </ul>
+  </nav>
 
 <%= yield %>
 

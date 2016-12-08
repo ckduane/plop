@@ -7,4 +7,8 @@ class User < ActiveRecord::Base
   validates :username, presence: true, uniqueness: true
   validates :email, presence: true, uniqueness: true
 
+  def add_points
+    self.points += 20
+  end
+
 end
