@@ -14,11 +14,3 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-
-$(document).ready(function(){
-  $('input[type="range"]').on("click", function(){
-      var span = $(this).next('span')
-      var value = $(this).val()
-      span.text(value)
-    })
-  })
