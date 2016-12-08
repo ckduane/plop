@@ -34,16 +34,16 @@ ActiveRecord::Schema.define(version: 20161207201142) do
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.integer  "outlet_rating",  null: false
-    t.integer  "wifi_rating",    null: false
-    t.integer  "seating_rating", null: false
-    t.integer  "parking_rating", null: false
-    t.integer  "atmosphere",     null: false
-    t.integer  "user_id",        null: false
-    t.integer  "restaurant_id",  null: false
-    t.text     "comments",       null: false
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.integer  "outlet_rating",     null: false
+    t.integer  "wifi_rating",       null: false
+    t.integer  "seating_rating",    null: false
+    t.integer  "parking_rating",    null: false
+    t.integer  "atmosphere_rating", null: false
+    t.integer  "user_id",           null: false
+    t.integer  "restaurant_id",     null: false
+    t.text     "comments",          null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
   create_table "users", force: :cascade do |t|

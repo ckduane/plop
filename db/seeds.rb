@@ -37,10 +37,10 @@ restaurants = Restaurant.create!([
 
 
 reviews = Review.create!([
-  {outlet_rating: 4, wifi_rating: 4, seating_rating: 5, parking_rating: 4, atmosphere: 5, user_id: 1, restaurant_id: 1, comments: "Cool place, great vibe!"},
-  {outlet_rating: 5, wifi_rating: 5, seating_rating: 4, parking_rating: 3, atmosphere: 4, user_id: 2, restaurant_id: 2, comments: "They have outlets on the tables!! Good coffee too."},
-  {outlet_rating: 3, wifi_rating: 3, seating_rating: 3, parking_rating: 4, atmosphere: 3, user_id: 3, restaurant_id: 3, comments: "Best thing is, you know exactly what you're getting."},
-  {outlet_rating: 3, wifi_rating: 2, seating_rating: 3, parking_rating: 5, atmosphere: 2, user_id: 4, restaurant_id: 4, comments: "Great place to get some work done."}
+  {outlet_rating: 4, wifi_rating: 4, seating_rating: 5, parking_rating: 4, atmosphere_rating: 5, user_id: 1, restaurant_id: 1, comments: "Cool place, great vibe!"},
+  {outlet_rating: 5, wifi_rating: 5, seating_rating: 4, parking_rating: 3, atmosphere_rating: 4, user_id: 2, restaurant_id: 2, comments: "They have outlets on the tables!! Good coffee too."},
+  {outlet_rating: 3, wifi_rating: 3, seating_rating: 3, parking_rating: 4, atmosphere_rating: 3, user_id: 3, restaurant_id: 3, comments: "Best thing is, you know exactly what you're getting."},
+  {outlet_rating: 3, wifi_rating: 2, seating_rating: 3, parking_rating: 5, atmosphere_rating: 2, user_id: 4, restaurant_id: 4, comments: "Great place to get some work done."}
   ])
 
 

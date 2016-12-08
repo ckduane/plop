@@ -5,7 +5,7 @@ class CreateReviews < ActiveRecord::Migration
       t.integer :wifi_rating, null: false
       t.integer :seating_rating, null: false
       t.integer :parking_rating, null: false
-      t.integer :atmosphere, null: false
+      t.integer :atmosphere_rating, null: false
       t.integer :user_id, null: false
       t.integer :restaurant_id, null: false
       t.text :comments, null: false
