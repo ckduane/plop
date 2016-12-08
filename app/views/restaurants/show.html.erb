@@ -1,0 +1,20 @@
+<div class="restaurant-details">
+  <h2><%=@restaurant.name%></h2>
+  <p><%=@restaurant.work_score%></p>
+  <ul>
+    <li><%=@restaurant.address%></li>
+    <li><a href=<%=@restaurant.link%>>Yelp Link</a></li>
+  </ul>
+  <%= form_for @review, url: review_new_path do |f| %>
+  <%= f.submit "Register" %>
+  <%end %>
+</div>
+<div class="restaurant-scores">
+  <ul>
+    <li>Parking: <%=@restaurant.parking_score%></li>
+    <li>Seating: <%=@restaurant.seating_score%></li>
+    <li>Wifi: <%=@restaurant.wifi_score%></li>
+    <li>Outlets:<%=@restaurant.outlet_score%></li>
+    <li>Atmosphere: <%=@restaurant.atmosphere_score%></li>
+  </ul>
+</div>

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get '/search' => "home#search"
 
-  root to: 'reviews#index'
+  root to: 'home#index'
 
   get 'users/register' => 'users#register', as: "user_register"
   post 'users/register' => 'users#create'
@@ -10,7 +10,9 @@ Rails.application.routes.draw do
   get 'users/logout' => 'users#logout', as: "user_logout"
   get 'users/:id' => 'users#profile', as: "user_profile"
 
-  get '/reviews' => 'reviews#index'
+  resources :restaurants, only: [:show] do
+    resources :reviews
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
