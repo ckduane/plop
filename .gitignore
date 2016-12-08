@@ -1,6 +1,4 @@
 .env
-<<<<<<< HEAD
 *.log
-=======
 log/development.log
->>>>>>> 187b1167a04b377d6c369ef27d539430f1dd7314
+tmp/

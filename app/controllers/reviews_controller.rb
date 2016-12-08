@@ -2,17 +2,16 @@ class ReviewsController < ApplicationController
   before_action :verifyLogin
   before_action :review_finder
 
-
   def show
-
   end
 
   def edit
-
   end
 
   def create
+  end
 
+  def index
   end
 
   def new
