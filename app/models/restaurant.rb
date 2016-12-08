@@ -6,6 +6,9 @@ class Restaurant < ActiveRecord::Base
   validates :address, presence: true
 
   def work_score #calculates workability score
+    if self.reviews.empty?
+      work_score = 0
+    else
     reviews = self.reviews
     work_score = 0
     reviews.each do |review|
@@ -18,41 +21,62 @@ class Restaurant < ActiveRecord::Base
     end
     work_score = work_score / reviews.length
     return work_score
+    end
   end
 
   def parking_score
-    reviews = self.reviews
-    parking_score = 0
-    reviews.each{ |review| parking_score += review.parking_rating}
-    parking_score = parking_score / reviews.length.to_f
+    if self.reviews.empty?
+      parking_score = 0
+    else
+      reviews = self.reviews
+      parking_score = 0
+      reviews.each{ |review| parking_score += review.parking_rating}
+      parking_score = parking_score / reviews.length.to_f
+    end
   end
 
   def outlet_score
-    reviews = self.reviews
-    outlet_score = 0
-    reviews.each{ |review| outlet_score += review.outlet_rating}
-    outlet_score = outlet_score / reviews.length.to_f
+    if self.reviews.empty?
+      outlet_score = 0
+    else
+      reviews = self.reviews
+      outlet_score = 0
+      reviews.each{ |review| outlet_score += review.outlet_rating}
+      outlet_score = outlet_score / reviews.length.to_f
+    end
   end
 
   def seating_score
-    reviews = self.reviews
-    seating_score = 0
-    reviews.each{ |review| seating_score += review.seating_rating}
-    seating_score = seating_score / reviews.length.to_f
+    if self.reviews.empty?
+      seating_score = 0
+    else
+      reviews = self.reviews
+      seating_score = 0
+      reviews.each{ |review| seating_score += review.seating_rating}
+      seating_score = seating_score / reviews.length.to_f
+    end
   end
 
   def atmosphere_score
-    reviews = self.reviews
-    atmosphere_score = 0
-    reviews.each{ |review| atmosphere_score += review.atmosphere_rating}
-    atmosphere_score = atmosphere_score / reviews.length.to_f
+    if self.reviews.empty?
+      atmosphere_score = 0
+    else
+      reviews = self.reviews
+      atmosphere_score = 0
+      reviews.each{ |review| atmosphere_score += review.atmosphere_rating}
+      atmosphere_score = atmosphere_score / reviews.length.to_f
+    end
   end
 
   def wifi_score
-    reviews = self.reviews
-    wifi_score = 0
-    reviews.each{ |review| wifi_score += review.wifi_rating}
-    wifi_score = wifi_score / reviews.length.to_f
+    if self.reviews.empty?
+      wifi_score = 0
+    else
+      reviews = self.reviews
+      wifi_score = 0
+      reviews.each{ |review| wifi_score += review.wifi_rating}
+      wifi_score = wifi_score / reviews.length.to_f
+    end
   end
 
   def self.sort_by_workability

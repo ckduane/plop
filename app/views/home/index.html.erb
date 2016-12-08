@@ -1,0 +1,80 @@
+<h1>Plop</h1>
+<p>Blurb about us Blurb about us Blurb about us Blurb about us Blurb about us Blurb about us Blurb about us Blurb about us Blurb about us Blurb about us Blurb about us Blurb about us Blurb about us Blurb about us Blurb about us Blurb about us Blurb about us Blurb about us Blurb about us Blurb about us Blurb about us Blurb about us Blurb about us Blurb about us Blurb about us v v Blurb about us</p>
+
+<table>
+<tr>
+  <th colspan="2">Workability</th>
+  <th></th>
+</tr>
+<% @r_workability.each do |restaurant| %>
+  <tr>
+    <td><%= restaurant.name %></td>
+    <td><%= restaurant.work_score %></td>
+  </tr>
+  <% end %>
+</table>
+
+<table>
+<tr>
+  <th colspan="2">Parking</th>
+  <th></th>
+</tr>
+<% @r_parking.each do |restaurant| %>
+  <tr>
+    <td><%= restaurant.name %></td>
+    <td><%= restaurant.parking_score %></td>
+  </tr>
+  <% end %>
+</table>
+
+<table>
+<tr>
+  <th colspan="2">Wifi</th>
+  <th></th>
+</tr>
+<% @r_wifi.each do |restaurant| %>
+  <tr>
+    <td><%= restaurant.name %></td>
+    <td><%= restaurant.wifi_score %></td>
+  </tr>
+  <% end %>
+</table>
+
+<table>
+<tr>
+  <th colspan="2">Seating</th>
+  <th></th>
+</tr>
+<% @r_seating.each do |restaurant| %>
+  <tr>
+    <td><%= restaurant.name %></td>
+    <td><%= restaurant.seating_score %></td>
+  </tr>
+  <% end %>
+</table>
+
+<table>
+<tr>
+  <th colspan="2">Outlet</th>
+  <th></th>
+</tr>
+<% @r_outlet.each do |restaurant| %>
+  <tr>
+    <td><%= restaurant.name %></td>
+    <td><%= restaurant.outlet_score %></td>
+  </tr>
+  <% end %>
+</table>
+
+<table>
+<tr>
+  <th colspan="2">Atmosphere</th>
+  <th></th>
+</tr>
+<% @r_atmosphere.each do |restaurant| %>
+  <tr>
+    <td><%= restaurant.name %></td>
+    <td><%= restaurant.atmosphere_score %></td>
+  </tr>
+  <% end %>
+</table>

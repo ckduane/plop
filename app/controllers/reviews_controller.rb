@@ -3,12 +3,7 @@ class ReviewsController < ApplicationController
 
 
   def index
-    @r_workability = Restaurant.sort_by_workability
-    @r_workability = Restaurant.sort_by_parking
-    @r_workability = Restaurant.sort_by_workability
-    @r_workability = Restaurant.sort_by_workability
-    @r_workability = Restaurant.sort_by_workability
-    @r_workability = Restaurant.sort_by_workability
+
   end
 
   def verifyLogin
