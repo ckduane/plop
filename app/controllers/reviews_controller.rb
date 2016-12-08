@@ -12,7 +12,6 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @review.restaurant_id = params[:restaurant_id]
     @review.user_id = session[:user_id]
-    p review_params
     if @review.save
       redirect_to "/restaurants/#{@review.restaurant_id}"
     else
