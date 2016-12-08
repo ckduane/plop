@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
 
   def add_points
     self.points += 20
+    self.save
   end
 
 end
