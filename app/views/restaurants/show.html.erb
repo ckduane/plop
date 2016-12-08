@@ -1,0 +1,41 @@
+<div class="restaurant-details">
+  <h2><%=@restaurant.name%></h2>
+  <p><%=@restaurant.work_score%></p>
+  <ul>
+    <li><%=@restaurant.address%></li>
+    <li><a href=<%=@restaurant.link%>>Yelp Link</a></li>
+  </ul>
+  <% if session[:user_id] %>
+    <%= form_for Review.new, url: new_restaurant_review_path(@restaurant.id) do |f| %>
+      <%= f.submit "Register" %>
+    <%end %>
+  <%end %>
+</div>
+<div class="restaurant-scores">
+  <ul>
+    <li>Parking: <%=@restaurant.parking_score%></li>
+    <li>Seating: <%=@restaurant.seating_score%></li>
+    <li>Wifi: <%=@restaurant.wifi_score%></li>
+    <li>Outlets:<%=@restaurant.outlet_score%></li>
+    <li>Atmosphere: <%=@restaurant.atmosphere_score%></li>
+  </ul>
+</div>
+<div class="restaurant-reviews">
+<% @restaurant.reviews.each do |review| %>
+  <div class="individual-review">
+    <div class="individual-stats"
+      <p><%= review.user.username %></p>
+      <p><%= review.user.points %></p>
+      <p><%= review.parking_rating %></p>
+      <p><%= review.seating_rating %></p>
+      <p><%= review.wifi_rating %></p>
+      <p><%= review.outlet_rating %></p>
+      <p><%= review.atmosphere_rating %></p>
+    </div>
+    <div class="individual-comments">
+      <p><%= review.comments %></p>
+    </div>
+  </div>
+<% end %>
+
+</div>
