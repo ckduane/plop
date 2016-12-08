@@ -34,6 +34,12 @@ class UsersController < ApplicationController
     redirect_to :root
   end
 
+  def profile
+    @user = User.find(params[:id])
+    @reviews = @user.reviews
+    @favorites = @user.favorites
+  end
+
 private
   def user_params
     params.require(:user).permit(:username, :email, :password)

@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   get 'users/login' => 'users#login', as: "user_login"
   post 'users/login' => 'users#validate'
   get 'users/logout' => 'users#logout', as: "user_logout"
+  get 'users/:id' => 'users#profile', as: "user_profile"
+
+  get '/reviews' => 'reviews#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
