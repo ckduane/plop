@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-
+before_action :verifyLogin, only: [:profile]
   def register
     @user = User.new
   end
@@ -35,9 +35,12 @@ class UsersController < ApplicationController
   end
 
   def profile
-    @user = User.find(params[:id])
-    @reviews = @user.reviews
-    @favorites = @user.favorites
+    if User.find(session[:user_id]).id == params[:id].to_i
+      @reviews = @user.reviews
+      @favorites = @user.favorites
+    else
+      redirect_to :root
+    end
   end
 
 private
@@ -45,4 +48,9 @@ private
     params.require(:user).permit(:username, :email, :password)
   end
 
+  def verifyLogin
+    if session[:user_id]
+      @user = User.find(session[:user_id])
+    end
+  end
 end

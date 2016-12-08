@@ -12,8 +12,10 @@
 <h2>Reviews</h2>
 <% @reviews.each do |review| %>
 <ul>
+  <li><%= link_to 'Delete', restaurant_review_path(review.restaurant, review), :method => :delete %></li>
   <li><%= review.restaurant.name %></li>
   <li><%= review.restaurant.work_score %></li>
   <li><%= review.comments %></li>
+  <li><%= link_to 'Edit', edit_restaurant_review_path(review.restaurant, review) %>
 </ul>
 <% end %>

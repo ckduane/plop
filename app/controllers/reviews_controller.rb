@@ -25,13 +25,21 @@ class ReviewsController < ApplicationController
   end
 
   def new
-    @review = Review.new
+    @review = Restaurant.find(params[:restaurant_id]).reviews.new
   end
 
   def update
+    if @review.update(review_params)
+      redirect_to "/restaurants/#{@review.restaurant_id}"
+    else
+      @errors = @review.errors.full_messages
+    end
   end
 
-  def delete
+  def destroy
+    @review = Review.find(params[:id])
+    @review.destroy
+    redirect_to :user_profile
   end
 
   private
