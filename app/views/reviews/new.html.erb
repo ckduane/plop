@@ -1,0 +1,33 @@
+<% if @errors %>
+  <% @errors.each do |error| %>
+  <p><%= error %></p>
+  <% end %>
+<% end %>
+
+<%= form_for @review, url: restaurant_reviews_path do |f| %>
+  <%= f.label :outlet_rating %>
+  <%= f.select :outlet_rating, [1, 2, 3, 4, 5 ] %>
+<!--   <input type="range" name="outlet_rating" value="3" min="1" max="5"/>
+  <span>3</span> -->
+  <%= f.label :wifi_rating %>
+  <%= f.select :wifi_rating, [1, 2, 3, 4, 5 ] %>
+<!--   <input type="range" name="wifi_rating" value="3" min="1" max="5"/>
+  <span>3</span> -->
+  <%= f.label :seating_rating %>
+  <%= f.select :seating_rating, [1, 2, 3, 4, 5 ] %>
+<!--   <input type="range" name="seating_rating" value="3" min="1" max="5"/>
+  <span>3</span> -->
+  <%= f.label :parking_rating %>
+  <%= f.select :parking_rating, [1, 2, 3, 4, 5 ] %>
+<!--   <input type="range" name="parking_rating" value="3" min="1" max="5"/>
+  <span>3</span>
+ -->
+  <%= f.label :atmosphere_rating %>
+  <%= f.select :atmosphere_rating, [1, 2, 3, 4, 5 ] %>
+<!--   <input type="range" name="atmosphere_rating" value="3" min="1" max="5"/>
+  <span>3</span>
+ -->
+  <%= f.label :comments %>
+  <%= f.text_area :comments, size: "60x12" %>
+  <%= f.submit "Add Review" %>
+<% end %>
