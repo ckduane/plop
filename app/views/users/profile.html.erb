@@ -8,14 +8,12 @@
   <li><%= favorite.restaurant.address %></li>
   <li><%= favorite.restaurant.work_score %></li>
 </ul>
-
+<% end %>
 <h2>Reviews</h2>
 <% @reviews.each do |review| %>
 <ul>
   <li><%= review.restaurant.name %></li>
   <li><%= review.restaurant.work_score %></li>
-  <li><%=  %></li>
-  <li><%=  %></li>
-  <li><%=  %></li>
-  <li><%=  %></li>
+  <li><%= review.comments %></li>
 </ul>
+<% end %>
