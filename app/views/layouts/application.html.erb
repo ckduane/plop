@@ -13,8 +13,8 @@
       <% if session[:user_id].nil? %>
         <li><%= link_to "Register", user_register_path %></li>
         <li><%= link_to "Login", user_login_path %></li>
-      <% else %>
-        <li><%= link_to @user.username, user_profile_path %></li>
+      <% elsif @user.nil? == false %>
+        <li><%= link_to @user.username, user_profile_path(@user) %></li>
         <li><%= link_to "Log Out", user_logout_path %></li>
       <% end %>
     </ul>

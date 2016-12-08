@@ -1,3 +1,4 @@
+
   [1m[36m (18.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
   [1m[35m (1.6ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
   [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
@@ -147,7 +148,7 @@ ORDER BY c.conname
   [1m[36mReview Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "reviews" WHERE ("reviews"."user_id" = 2 AND "reviews"."id" != 5 AND "reviews"."restaurant_id" = 1) LIMIT 1[0m
 
 
-<<<<<<< HEAD
+
 Started GET "/" for ::1 at 2016-12-07 15:14:01 -0800
 
 ActiveRecord::NoDatabaseError (FATAL:  database "okmc_development" does not exist
@@ -179,13 +180,13 @@ ActiveRecord::NoDatabaseError (FATAL:  database "okmc_development" does not exis
   actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
   actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
   actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
-=======
+
 Started GET "/users/register" for ::1 at 2016-12-07 15:20:15 -0800
   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 
 ActionController::RoutingError (No route matches [GET] "/users/register"):
   actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
->>>>>>> dd792ae6920e610fa543c5b147559f6eddbedb81
+
   web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
   web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
   web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
@@ -213,23 +214,23 @@ ActionController::RoutingError (No route matches [GET] "/users/register"):
   /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
 
 
-<<<<<<< HEAD
+
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (55.9ms)
-=======
+
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (20.1ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (11.9ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (76.9ms)
->>>>>>> dd792ae6920e610fa543c5b147559f6eddbedb81
+
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
-<<<<<<< HEAD
+
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (64.9ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
@@ -628,7 +629,6 @@ AbstractController::ActionNotFound (The action 'search' could not be found for A
   actionpack (4.2.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
   activerecord (4.2.4) lib/active_record/query_cache.rb:36:in `call'
   activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
-=======
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (20.5ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
@@ -830,7 +830,7 @@ SyntaxError (/Users/apprentice/Desktop/okmc/client-project-challenge/app/views/u
 ...ut_buffer.append=( if @errors );@output_buffer.safe_append='
 ...                               ^
 /Users/apprentice/Desktop/okmc/client-project-challenge/app/views/users/register.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
-   end 
+   end
       ^
 /Users/apprentice/Desktop/okmc/client-project-challenge/app/views/users/register.html.erb:34: syntax error, unexpected keyword_ensure, expecting ')'
 /Users/apprentice/Desktop/okmc/client-project-challenge/app/views/users/register.html.erb:36: syntax error, unexpected keyword_end, expecting ')'):
@@ -863,7 +863,7 @@ SyntaxError (/Users/apprentice/Desktop/okmc/client-project-challenge/app/views/u
 ...ut_buffer.append=( if @errors );@output_buffer.safe_append='
 ...                               ^
 /Users/apprentice/Desktop/okmc/client-project-challenge/app/views/users/register.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
- end 
+ end
     ^
 /Users/apprentice/Desktop/okmc/client-project-challenge/app/views/users/register.html.erb:34: syntax error, unexpected keyword_ensure, expecting ')'
 /Users/apprentice/Desktop/okmc/client-project-challenge/app/views/users/register.html.erb:36: syntax error, unexpected keyword_end, expecting ')'):
@@ -1099,7 +1099,7 @@ ActionController::RoutingError (uninitialized constant ReviewsController):
   actionpack (4.2.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
   activerecord (4.2.4) lib/active_record/query_cache.rb:36:in `call'
   activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
->>>>>>> dd792ae6920e610fa543c5b147559f6eddbedb81
+
   activerecord (4.2.4) lib/active_record/migration.rb:377:in `call'
   actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
   activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
@@ -1136,7 +1136,6 @@ ActionController::RoutingError (uninitialized constant ReviewsController):
   /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
 
 
-<<<<<<< HEAD
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (1.8ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
@@ -1372,11 +1371,11 @@ Yelp::Error::MissingAPIKeys (You're missing an API key):
   [1m[36m (1098.3ms)[0m  [1mCREATE DATABASE "okmc_development" ENCODING = 'unicode'[0m
   [1m[35m (327.4ms)[0m  CREATE DATABASE "okmc_test" ENCODING = 'unicode'
   [1m[36mSQL (38.6ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
-  [1m[35m (34.1ms)[0m  CREATE TABLE "favorites" ("id" serial primary key, "user_id" integer NOT NULL, "restaurant_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (34.1ms)[0m  CREATE TABLE "favorites" ("id" serial primary key, "user_id" integer NOT NULL, "restaurant_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)
   [1m[36m (14.1ms)[0m  [1mCREATE TABLE "restaurants" ("id" serial primary key, "name" character varying NOT NULL, "phone_number" character varying, "address" character varying NOT NULL, "link" character varying, "hours_of_op" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
-  [1m[35m (4.0ms)[0m  CREATE TABLE "reviews" ("id" serial primary key, "outlet_rating" integer NOT NULL, "wifi_rating" integer NOT NULL, "seating_rating" integer NOT NULL, "parking_rating" integer NOT NULL, "atmosphere" integer NOT NULL, "user_id" integer NOT NULL, "restaurant_id" integer NOT NULL, "comments" text NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (4.0ms)[0m  CREATE TABLE "reviews" ("id" serial primary key, "outlet_rating" integer NOT NULL, "wifi_rating" integer NOT NULL, "seating_rating" integer NOT NULL, "parking_rating" integer NOT NULL, "atmosphere" integer NOT NULL, "user_id" integer NOT NULL, "restaurant_id" integer NOT NULL, "comments" text NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)
   [1m[36m (18.6ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "username" character varying NOT NULL, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "points" integer DEFAULT 0, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
-  [1m[35m (2.4ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[35m (2.4ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL)
   [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
   [1m[35m (0.3ms)[0m  SELECT version FROM "schema_migrations"
   [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161207201142')[0m
@@ -1384,18 +1383,18 @@ Yelp::Error::MissingAPIKeys (You're missing an API key):
   [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161207200809')[0m
   [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161207201121')
   [1m[36mSQL (0.2ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
-  [1m[35m (3.8ms)[0m  CREATE TABLE "favorites" ("id" serial primary key, "user_id" integer NOT NULL, "restaurant_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (3.8ms)[0m  CREATE TABLE "favorites" ("id" serial primary key, "user_id" integer NOT NULL, "restaurant_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)
   [1m[36m (2.9ms)[0m  [1mCREATE TABLE "restaurants" ("id" serial primary key, "name" character varying NOT NULL, "phone_number" character varying, "address" character varying NOT NULL, "link" character varying, "hours_of_op" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
-  [1m[35m (4.2ms)[0m  CREATE TABLE "reviews" ("id" serial primary key, "outlet_rating" integer NOT NULL, "wifi_rating" integer NOT NULL, "seating_rating" integer NOT NULL, "parking_rating" integer NOT NULL, "atmosphere" integer NOT NULL, "user_id" integer NOT NULL, "restaurant_id" integer NOT NULL, "comments" text NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (4.2ms)[0m  CREATE TABLE "reviews" ("id" serial primary key, "outlet_rating" integer NOT NULL, "wifi_rating" integer NOT NULL, "seating_rating" integer NOT NULL, "parking_rating" integer NOT NULL, "atmosphere" integer NOT NULL, "user_id" integer NOT NULL, "restaurant_id" integer NOT NULL, "comments" text NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)
   [1m[36m (3.0ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "username" character varying NOT NULL, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "points" integer DEFAULT 0, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
-  [1m[35m (1.6ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[35m (1.6ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL)
   [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
   [1m[35m (0.3ms)[0m  SELECT version FROM "schema_migrations"
   [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161207201142')[0m
   [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161207200621')
   [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161207200809')[0m
   [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161207201121')
-=======
+
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (60.9ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
@@ -1523,11 +1522,11 @@ PG::DuplicateDatabase: ERROR:  database "okmc_development" already exists
   [1m[36m (3.1ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "username" character varying NOT NULL, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "points" integer DEFAULT 0, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
   [1m[35m (1.4ms)[0m  SELECT version FROM "schema_migrations"
   [1m[36mSQL (0.2ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
-  [1m[35m (4.4ms)[0m  CREATE TABLE "favorites" ("id" serial primary key, "user_id" integer NOT NULL, "restaurant_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (4.4ms)[0m  CREATE TABLE "favorites" ("id" serial primary key, "user_id" integer NOT NULL, "restaurant_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)
   [1m[36m (3.1ms)[0m  [1mCREATE TABLE "restaurants" ("id" serial primary key, "name" character varying NOT NULL, "phone_number" character varying, "address" character varying NOT NULL, "link" character varying, "hours_of_op" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
-  [1m[35m (4.3ms)[0m  CREATE TABLE "reviews" ("id" serial primary key, "outlet_rating" integer NOT NULL, "wifi_rating" integer NOT NULL, "seating_rating" integer NOT NULL, "parking_rating" integer NOT NULL, "atmosphere" integer NOT NULL, "user_id" integer NOT NULL, "restaurant_id" integer NOT NULL, "comments" text NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (4.3ms)[0m  CREATE TABLE "reviews" ("id" serial primary key, "outlet_rating" integer NOT NULL, "wifi_rating" integer NOT NULL, "seating_rating" integer NOT NULL, "parking_rating" integer NOT NULL, "atmosphere" integer NOT NULL, "user_id" integer NOT NULL, "restaurant_id" integer NOT NULL, "comments" text NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)
   [1m[36m (5.2ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "username" character varying NOT NULL, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "points" integer DEFAULT 0, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
-  [1m[35m (1.9ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[35m (1.9ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL)
   [1m[36m (1.3ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
   [1m[35m (0.3ms)[0m  SELECT version FROM "schema_migrations"
   [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161207201142')[0m
@@ -1589,23 +1588,23 @@ PG::DuplicateDatabase: ERROR:  database "okmc_development" already exists
   [1m[36m (2.9ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "username" character varying NOT NULL, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "points" integer DEFAULT 0, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
   [1m[35m (0.3ms)[0m  SELECT version FROM "schema_migrations"
   [1m[36mSQL (0.2ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
-  [1m[35m (3.6ms)[0m  CREATE TABLE "favorites" ("id" serial primary key, "user_id" integer NOT NULL, "restaurant_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (3.6ms)[0m  CREATE TABLE "favorites" ("id" serial primary key, "user_id" integer NOT NULL, "restaurant_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)
   [1m[36m (3.0ms)[0m  [1mCREATE TABLE "restaurants" ("id" serial primary key, "name" character varying NOT NULL, "phone_number" character varying, "address" character varying NOT NULL, "link" character varying, "hours_of_op" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
-  [1m[35m (3.2ms)[0m  CREATE TABLE "reviews" ("id" serial primary key, "outlet_rating" integer NOT NULL, "wifi_rating" integer NOT NULL, "seating_rating" integer NOT NULL, "parking_rating" integer NOT NULL, "atmosphere" integer NOT NULL, "user_id" integer NOT NULL, "restaurant_id" integer NOT NULL, "comments" text NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (3.2ms)[0m  CREATE TABLE "reviews" ("id" serial primary key, "outlet_rating" integer NOT NULL, "wifi_rating" integer NOT NULL, "seating_rating" integer NOT NULL, "parking_rating" integer NOT NULL, "atmosphere" integer NOT NULL, "user_id" integer NOT NULL, "restaurant_id" integer NOT NULL, "comments" text NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)
   [1m[36m (3.9ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "username" character varying NOT NULL, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "points" integer DEFAULT 0, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
-  [1m[35m (3.9ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[35m (3.9ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL)
   [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
   [1m[35m (0.3ms)[0m  SELECT version FROM "schema_migrations"
   [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161207201142')[0m
   [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161207200621')
   [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161207200809')[0m
   [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161207201121')
->>>>>>> dd792ae6920e610fa543c5b147559f6eddbedb81
+
   [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35m (0.1ms)[0m  BEGIN
   [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Ori' LIMIT 1[0m
   [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'ori@gmail.com' LIMIT 1
-<<<<<<< HEAD
+
   [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Ori"], ["email", "ori@gmail.com"], ["password_digest", "$2a$10$.Bs0pGFZel.xSJjLMi7BJ.OPuz55TfLLu5JMgYQNUABoHjgUWl9ve"], ["created_at", "2016-12-08 00:03:32.321385"], ["updated_at", "2016-12-08 00:03:32.321385"]]
   [1m[35m (15.6ms)[0m  COMMIT
   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
@@ -1664,7 +1663,7 @@ PG::DuplicateDatabase: ERROR:  database "okmc_development" already exists
   [1m[35mSQL (0.2ms)[0m  INSERT INTO "favorites" ("user_id", "restaurant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["user_id", 1], ["restaurant_id", 4], ["created_at", "2016-12-08 00:03:32.762767"], ["updated_at", "2016-12-08 00:03:32.762767"]]
   [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-=======
+
   [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Ori"], ["email", "ori@gmail.com"], ["password_digest", "$2a$10$NBz5Kvq/jCuSFT9tZggVxuWkVfmQYPjj2TQB088//i7HvWqOViTgi"], ["created_at", "2016-12-08 00:24:09.915886"], ["updated_at", "2016-12-08 00:24:09.915886"]]
   [1m[35m (0.4ms)[0m  COMMIT
   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
@@ -1717,7 +1716,7 @@ Migrating to CreateFavorites (20161207201142)
   [1m[36m (2.8ms)[0m  [1mCREATE TABLE "favorites" ("id" serial primary key, "user_id" integer NOT NULL, "restaurant_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
   [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20161207201142"]]
   [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
->>>>>>> dd792ae6920e610fa543c5b147559f6eddbedb81
+
   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
   [1m[36m (2.1ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
 FROM pg_constraint c
@@ -1731,11 +1730,11 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
-<<<<<<< HEAD
+
   [1m[35m (1.6ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
-=======
+
   [1m[35m (1.5ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
->>>>>>> dd792ae6920e610fa543c5b147559f6eddbedb81
+
 FROM pg_constraint c
 JOIN pg_class t1 ON c.conrelid = t1.oid
 JOIN pg_class t2 ON c.confrelid = t2.oid
@@ -1771,7 +1770,7 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 
-<<<<<<< HEAD
+
 
 
 Started GET "/search" for ::1 at 2016-12-07 16:03:54 -0800
@@ -1979,7 +1978,7 @@ Started GET "/search" for ::1 at 2016-12-07 16:16:01 -0800
 LoadError (Unable to autoload constant HomeController, expected /Users/apprentice/client-project-challenge/app/controllers/home_controller.rb to define it):
   activesupport (4.2.4) lib/active_support/dependencies.rb:495:in `load_missing_constant'
   activesupport (4.2.4) lib/active_support/dependencies.rb:184:in `const_missing'
-=======
+
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35m (0.1ms)[0m  BEGIN
   [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Ori' LIMIT 1[0m
@@ -2099,17 +2098,16 @@ Completed 200 OK in 22ms (Views: 17.3ms | ActiveRecord: 2.6ms)
 Started GET "/" for ::1 at 2016-12-07 16:45:55 -0800
 
 ActionController::RoutingError (uninitialized constant ReviewsController):
->>>>>>> dd792ae6920e610fa543c5b147559f6eddbedb81
+
   activesupport (4.2.4) lib/active_support/inflector/methods.rb:261:in `const_get'
   activesupport (4.2.4) lib/active_support/inflector/methods.rb:261:in `block in constantize'
   activesupport (4.2.4) lib/active_support/inflector/methods.rb:259:in `each'
   activesupport (4.2.4) lib/active_support/inflector/methods.rb:259:in `inject'
   activesupport (4.2.4) lib/active_support/inflector/methods.rb:259:in `constantize'
-<<<<<<< HEAD
+
   activesupport (4.2.4) lib/active_support/dependencies.rb:566:in `get'
   activesupport (4.2.4) lib/active_support/dependencies.rb:597:in `constantize'
-=======
->>>>>>> dd792ae6920e610fa543c5b147559f6eddbedb81
+
   actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:72:in `controller_reference'
   actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:62:in `controller'
   actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:41:in `serve'
@@ -2163,23 +2161,23 @@ ActionController::RoutingError (uninitialized constant ReviewsController):
   /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
 
 
-<<<<<<< HEAD
+
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.9ms)
-=======
+
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (62.5ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (90.4ms)
->>>>>>> dd792ae6920e610fa543c5b147559f6eddbedb81
+
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
-<<<<<<< HEAD
+
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (14.1ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
@@ -2190,7 +2188,7 @@ Started GET "/search" for ::1 at 2016-12-07 16:16:24 -0800
 
 ActionController::RoutingError (No route matches [GET] "/search"):
   actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
-=======
+
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (18.0ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
@@ -2237,7 +2235,7 @@ ActionController::RoutingError (uninitialized constant ReviewsController):
   actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
   actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
   actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
->>>>>>> dd792ae6920e610fa543c5b147559f6eddbedb81
+
   web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
   web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
   web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
@@ -2265,23 +2263,23 @@ ActionController::RoutingError (uninitialized constant ReviewsController):
   /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
 
 
-<<<<<<< HEAD
+
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (14.7ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (29.5ms)
-=======
+
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (52.0ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (75.8ms)
->>>>>>> dd792ae6920e610fa543c5b147559f6eddbedb81
+
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
-<<<<<<< HEAD
+
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (15.0ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
@@ -3120,12 +3118,12 @@ Completed 200 OK in 919ms (Views: 54.6ms | ActiveRecord: 0.0ms)
 Started GET "/search" for ::1 at 2016-12-07 17:35:29 -0800
 Processing by HomeController#search as HTML
 Completed 200 OK in 1159ms (Views: 1.7ms | ActiveRecord: 0.0ms)
-=======
+
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.0ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (27.7ms)
->>>>>>> dd792ae6920e610fa543c5b147559f6eddbedb81
+
   [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
   [1m[36m (2.0ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
@@ -3427,11 +3425,11 @@ ORDER BY c.conname
   [1m[36m (313.7ms)[0m  [1mCREATE DATABASE "okmc_development" ENCODING = 'unicode'[0m
   [1m[35m (275.5ms)[0m  CREATE DATABASE "okmc_test" ENCODING = 'unicode'
   [1m[36mSQL (0.2ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
-  [1m[35m (4.3ms)[0m  CREATE TABLE "favorites" ("id" serial primary key, "user_id" integer NOT NULL, "restaurant_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (4.3ms)[0m  CREATE TABLE "favorites" ("id" serial primary key, "user_id" integer NOT NULL, "restaurant_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)
   [1m[36m (3.9ms)[0m  [1mCREATE TABLE "restaurants" ("id" serial primary key, "name" character varying NOT NULL, "phone_number" character varying, "address" character varying NOT NULL, "link" character varying, "hours_of_op" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
-  [1m[35m (6.1ms)[0m  CREATE TABLE "reviews" ("id" serial primary key, "outlet_rating" integer NOT NULL, "wifi_rating" integer NOT NULL, "seating_rating" integer NOT NULL, "parking_rating" integer NOT NULL, "atmosphere_rating" integer NOT NULL, "user_id" integer NOT NULL, "restaurant_id" integer NOT NULL, "comments" text NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (6.1ms)[0m  CREATE TABLE "reviews" ("id" serial primary key, "outlet_rating" integer NOT NULL, "wifi_rating" integer NOT NULL, "seating_rating" integer NOT NULL, "parking_rating" integer NOT NULL, "atmosphere_rating" integer NOT NULL, "user_id" integer NOT NULL, "restaurant_id" integer NOT NULL, "comments" text NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)
   [1m[36m (2.9ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "username" character varying NOT NULL, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "points" integer DEFAULT 0, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
-  [1m[35m (32.5ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[35m (32.5ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL)
   [1m[36m (30.6ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
   [1m[35m (0.4ms)[0m  SELECT version FROM "schema_migrations"
   [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161207201142')[0m
@@ -3439,11 +3437,11 @@ ORDER BY c.conname
   [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161207200809')[0m
   [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161207201121')
   [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
-  [1m[35m (4.0ms)[0m  CREATE TABLE "favorites" ("id" serial primary key, "user_id" integer NOT NULL, "restaurant_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (4.0ms)[0m  CREATE TABLE "favorites" ("id" serial primary key, "user_id" integer NOT NULL, "restaurant_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)
   [1m[36m (3.1ms)[0m  [1mCREATE TABLE "restaurants" ("id" serial primary key, "name" character varying NOT NULL, "phone_number" character varying, "address" character varying NOT NULL, "link" character varying, "hours_of_op" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
-  [1m[35m (3.7ms)[0m  CREATE TABLE "reviews" ("id" serial primary key, "outlet_rating" integer NOT NULL, "wifi_rating" integer NOT NULL, "seating_rating" integer NOT NULL, "parking_rating" integer NOT NULL, "atmosphere_rating" integer NOT NULL, "user_id" integer NOT NULL, "restaurant_id" integer NOT NULL, "comments" text NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (3.7ms)[0m  CREATE TABLE "reviews" ("id" serial primary key, "outlet_rating" integer NOT NULL, "wifi_rating" integer NOT NULL, "seating_rating" integer NOT NULL, "parking_rating" integer NOT NULL, "atmosphere_rating" integer NOT NULL, "user_id" integer NOT NULL, "restaurant_id" integer NOT NULL, "comments" text NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)
   [1m[36m (3.0ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "username" character varying NOT NULL, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "points" integer DEFAULT 0, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
-  [1m[35m (2.0ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[35m (2.0ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL)
   [1m[36m (1.3ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
   [1m[35m (0.4ms)[0m  SELECT version FROM "schema_migrations"
   [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161207201142')[0m
@@ -4332,3 +4330,4 @@ ActionView::Template::Error (undefined local variable or method `review_new_path
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (30.0ms)
+

@@ -11,4 +11,6 @@ class Review < ActiveRecord::Base
   validates :restaurant_id, presence: true
   validates :comments, presence: true
 
+
+
 end

@@ -1,5 +1,7 @@
 class ReviewsController < ApplicationController
+  before_action :verifyLogin
   before_action :review_finder
+
 
   def show
 
@@ -25,12 +27,18 @@ class ReviewsController < ApplicationController
   private
 
   def user_params
-    params.require(:restaurant).permit(:username, :email, :password)
+    params.require(:review).permit(:username, :email, :password)
   end
 
   def review_finder
     @review = Review.find(params[:id])
   end
 
+
+  def verifyLogin
+    if session[:user_id]
+      @user = User.find(session[:user_id])
+    end
+  end
 
 end
