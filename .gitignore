@@ -1,2 +1,2 @@
 .env
-log/development.log
+*.log
