@@ -9,6 +9,7 @@
 <body>
   <nav>
     <ul>
+      <li><%=render partial: 'home/search'%> </li>
       <li><%= link_to "Home", root_path %></li>
       <% if session[:user_id].nil? %>
         <li><%= link_to "Register", user_register_path %></li>

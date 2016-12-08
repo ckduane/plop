@@ -11,9 +11,16 @@ before_action :verifyLogin
   end
 
   def search
-
-
-    # render json: Yelp.client.search('San Diego', { term: 'cofee shops' }, limit: 5)
+    search = params[:q]
+    @restaurants_by_name = Restaurant.where('lower(name) LIKE ?', "%#{search.downcase}%")
+    @restaurants_by_location = Restaurant.where('lower(address) LIKE ?', "%#{search.downcase}%")
+    if @restaurants_by_location.empty? && @restaurants_by_name.empty?
+     yelp_search(search)
+     @restaurants = Restaurant.last(3)
+      # @message = "I have nothing, therefore I am nothing."
+    elsif params[:q] == ""
+      @message = "Try again, dumbass."
+    end
   end
 
 private

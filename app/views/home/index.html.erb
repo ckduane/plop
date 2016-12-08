@@ -12,7 +12,7 @@
 <table>
 <% @r_workability.each do |restaurant| %>
   <tr>
-    <td><%= restaurant.name %></td>
+    <td><%= link_to restaurant.name, restaurant_path(restaurant) %></td>
     <td><%= restaurant.work_score %></td>
   </tr>
   <% end %>
@@ -21,7 +21,7 @@
 <table>
 <% @r_parking.each do |restaurant| %>
   <tr>
-    <td><%= restaurant.name %></td>
+    <td><%= link_to restaurant.name, restaurant_path(restaurant) %></td>
     <td><%= restaurant.score("parking_rating") %></td>
   </tr>
   <% end %>
@@ -30,7 +30,7 @@
 <table>
 <% @r_wifi.each do |restaurant| %>
   <tr>
-    <td><%= restaurant.name %></td>
+    <td><%= link_to restaurant.name, restaurant_path(restaurant) %></td>
     <td><%= restaurant.score("wifi_rating") %></td>
   </tr>
   <% end %>
@@ -39,7 +39,7 @@
 <table>
 <% @r_seating.each do |restaurant| %>
   <tr>
-    <td><%= restaurant.name %></td>
+    <td><%= link_to restaurant.name, restaurant_path(restaurant) %></td>
     <td><%= restaurant.score("seating_rating") %></td>
   </tr>
   <% end %>
@@ -48,7 +48,7 @@
 <table>
 <% @r_outlet.each do |restaurant| %>
   <tr>
-    <td><%= restaurant.name %></td>
+    <td><%= link_to restaurant.name, restaurant_path(restaurant) %></td>
     <td><%= restaurant.score("outlet_rating") %></td>
   </tr>
   <% end %>
@@ -57,7 +57,7 @@
 <table>
 <% @r_atmosphere.each do |restaurant| %>
   <tr>
-    <td><%= restaurant.name %></td>
+    <td><%= link_to restaurant.name, restaurant_path(restaurant) %></td>
     <td><%= restaurant.score("atmosphere_rating") %></td>
   </tr>
   <% end %>
