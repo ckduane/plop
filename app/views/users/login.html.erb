@@ -1,5 +1,5 @@
-<table>
   <%= form_for :user, url: user_login_path do |f| %>
+<table>
   <tr>
     <th colspan="2">Login</th>
     <th></th>
@@ -15,8 +15,8 @@
 <tr>
   <td><%= f.submit "Login" %></td>
 </tr>
-<% end %>
 </table>
+<% end %>
 
 <ul>
 <% if @error %>
