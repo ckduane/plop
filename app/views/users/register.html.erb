@@ -1,5 +1,5 @@
+<%= form_for @user, url: user_register_path do |f| %>
 <table>
-  <%= form_for @user, url: user_register_path do |f| %>
   <tr>
     <th colspan="2">Register</th>
     <th></th>
@@ -19,8 +19,8 @@
 <tr>
   <td><%= f.submit "Register" %></td>
 </tr>
-<% end %>
 </table>
+<% end %>
 
 <ul>
 <% if @errors %>
