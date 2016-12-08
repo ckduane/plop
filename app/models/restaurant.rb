@@ -12,26 +12,19 @@ class Restaurant < ActiveRecord::Base
     reviews = self.reviews
     work_score = 0
     reviews.each do |review|
-      work_score += review.outlet_rating
-      work_score += review.wifi_rating
-      work_score += review.seating_rating
-      work_score += review.parking_rating
-      work_score += review.atmosphere_rating
-      work_score = work_score / 5.0
+      work_score += review.work_score
     end
-    work_score = work_score / reviews.length
-    return work_score
+    work_score / reviews.length
     end
   end
 
   def parking_score
+      parking_score = 0
     if self.reviews.empty?
-      parking_score = 0
+      return parking_score
     else
-      reviews = self.reviews
-      parking_score = 0
-      reviews.each{ |review| parking_score += review.parking_rating}
-      parking_score = parking_score / reviews.length.to_f
+      self.reviews.each{ |review| parking_score += review.parking_rating}
+      parking_score / reviews.length.to_f
     end
   end
 

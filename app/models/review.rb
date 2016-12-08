@@ -11,6 +11,8 @@ class Review < ActiveRecord::Base
   validates :restaurant_id, presence: true
   validates :comments, presence: true
 
-
+  def work_score
+    (self.outlet_rating + self.wifi_rating + self.seating_rating + self.parking_rating + self.atmosphere_rating) / 5.0
+  end
 
 end
