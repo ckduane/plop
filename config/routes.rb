@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get '/search' => "home#search"
 
   root to: 'reviews#index'
 
@@ -65,4 +66,5 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
 end
