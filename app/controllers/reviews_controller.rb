@@ -16,6 +16,8 @@ class ReviewsController < ApplicationController
   end
 
   def new
+    review_finder
+    "hello"
   end
 
   def update
