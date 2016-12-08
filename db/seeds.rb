@@ -13,12 +13,27 @@ users = User.create!([
 {username: "Keith", email: "keith@gmail.com", password: "123"}
   ])
 
+40.times do
+  client = Yelp.client.search('San Diego', { term: 'cofee shops' }, limit: 1)
+  client.businesses.first.name
+
+end
+
+ parameters = { term: params[:term], limit: 1 }
+    # puts "params[:term]: #{params[:term]}"
+
+    client = Yelp.client.search('San Diego', { term: 'cofee shops' }, limit: 1)
+    p client.businesses.first.name
+    render json: Yelp.client.search('San Diego', { term: 'cofee shops' }, limit: 1)
+
 restaurants = Restaurant.create!([
 {name: "Young Hickory", phone_number: "(619) 795-6574", address: "4096 30th St., San Diego, CA 92104", link: "www.younghickory.com", hours_of_op: "7AM - 12AM"},
 {name: "Tea & Coffee Collective", phone_number: "(619) 564-8086", address: "631 Ninth Ave, San Diego, CA 92101", link: "www.coffeeandteacollective.com", hours_of_op: "7AM - 4PM"},
 {name: "Starbucks", phone_number: "(619) 693-3750", address: "1011 Market St., San Diego, CA 92101", link: "www.starbucks.com", hours_of_op: "5AM - 9PM"},
 {name: "Lofty", phone_number: "(760) 230-6747", address: "132 S Cedros Ave., Solana Beach, CA 92075", link: "www.loftycoffee.com", hours_of_op: "6AM - 6PM"},
   ])
+
+
 
 
 reviews = Review.create!([
