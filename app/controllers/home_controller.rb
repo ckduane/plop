@@ -1,4 +1,3 @@
-require 'pry'
 class HomeController < ApplicationController
 before_action :verifyLogin
 
@@ -19,7 +18,6 @@ before_action :verifyLogin
       puts "@postal_code: #{@postal_code}"
       puts "@r_parking: #{@r_parking}"
       render :index, :layout => false
-      # binding.pry
     else
       puts "QUERY ABSENT!!!"
       @r_workability = Restaurant.sort_by_workability.first(6)
