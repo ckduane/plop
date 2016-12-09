@@ -1,64 +1,68 @@
-<h1>Plop</h1>
-<p>Blurb about us Blurb about us Blurb about us Blurb about us Blurb about us Blurb about us Blurb about us Blurb about us Blurb about us Blurb about us Blurb about us Blurb about us Blurb about us Blurb about us Blurb about us Blurb about us Blurb about us Blurb about us Blurb about us Blurb about us Blurb about us Blurb about us Blurb about us Blurb about us Blurb about us v v Blurb about us</p>
+<div class="homepage">
+  <div class="index-categories">
+    <ul>
+      <li>Workability</li>
+      <li>Parking</li>
+      <li>Wifi</li>
+      <li>Seating</li>
+      <li>Outlet</li>
+      <li>Atmosphere</li>
+    </ul>
+  </div>
 
-<ul>
-  <li>Workability</li>
-  <li>Parking</li>
-  <li>Wifi</li>
-  <li>Seating</li>
-  <li>Outlet</li>
-  <li>Atmosphere</li>
-</ul>
-<table>
-<% @r_workability.each do |restaurant| %>
-  <tr>
-    <td><%= link_to restaurant.name, restaurant_path(restaurant) %></td>
-    <td><%= restaurant.work_score %></td>
-  </tr>
-  <% end %>
-</table>
+  <div class="index-sorts">
+    <table>
+    <% @r_workability.each do |restaurant| %>
+      <tr>
+        <td><%= link_to restaurant.name, restaurant_path(restaurant) %></td>
+        <td><%= restaurant.work_score %></td>
+      </tr>
+      <% end %>
+    </table>
 
-<table>
-<% @r_parking.each do |restaurant| %>
-  <tr>
-    <td><%= link_to restaurant.name, restaurant_path(restaurant) %></td>
-    <td><%= restaurant.score("parking_rating") %></td>
-  </tr>
-  <% end %>
-</table>
+    <table>
+    <% @r_parking.each do |restaurant| %>
+      <tr>
+        <td><%= link_to restaurant.name, restaurant_path(restaurant) %></td>
+        <td><%= restaurant.score("parking_rating") %></td>
+      </tr>
+      <% end %>
+    </table>
 
-<table>
-<% @r_wifi.each do |restaurant| %>
-  <tr>
-    <td><%= link_to restaurant.name, restaurant_path(restaurant) %></td>
-    <td><%= restaurant.score("wifi_rating") %></td>
-  </tr>
-  <% end %>
-</table>
+    <table>
+    <% @r_wifi.each do |restaurant| %>
+      <tr>
+        <td><%= link_to restaurant.name, restaurant_path(restaurant) %></td>
+        <td><%= restaurant.score("wifi_rating") %></td>
+      </tr>
+      <% end %>
+    </table>
 
-<table>
-<% @r_seating.each do |restaurant| %>
-  <tr>
-    <td><%= link_to restaurant.name, restaurant_path(restaurant) %></td>
-    <td><%= restaurant.score("seating_rating") %></td>
-  </tr>
-  <% end %>
-</table>
+    <table>
+    <% @r_seating.each do |restaurant| %>
+      <tr>
+        <td><%= link_to restaurant.name, restaurant_path(restaurant) %></td>
+        <td><%= restaurant.score("seating_rating") %></td>
+      </tr>
+      <% end %>
+    </table>
 
-<table>
-<% @r_outlet.each do |restaurant| %>
-  <tr>
-    <td><%= link_to restaurant.name, restaurant_path(restaurant) %></td>
-    <td><%= restaurant.score("outlet_rating") %></td>
-  </tr>
-  <% end %>
-</table>
+    <table>
+    <% @r_outlet.each do |restaurant| %>
+      <tr>
+        <td><%= link_to restaurant.name, restaurant_path(restaurant) %></td>
+        <td><%= restaurant.score("outlet_rating") %></td>
+      </tr>
+      <% end %>
+    </table>
 
-<table>
-<% @r_atmosphere.each do |restaurant| %>
-  <tr>
-    <td><%= link_to restaurant.name, restaurant_path(restaurant) %></td>
-    <td><%= restaurant.score("atmosphere_rating") %></td>
-  </tr>
-  <% end %>
-</table>
+    <table>
+    <% @r_atmosphere.each do |restaurant| %>
+      <tr>
+        <td><%= link_to restaurant.name, restaurant_path(restaurant) %></td>
+        <td><%= restaurant.score("atmosphere_rating") %></td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
