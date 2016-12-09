@@ -8,9 +8,7 @@
 <% end %>
 
   <%= form_for :user, url: user_login_path do |f| %>
-    <%= f.label "Email: " %>
     <%= f.text_field :email, placeholder: "Email"  %>
-    <%= f.label "Password: " %>
     <%= f.password_field :password, placeholder: "Password"  %>
     <%= f.submit "Login" %>
   <% end %>
