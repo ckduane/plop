@@ -4,17 +4,19 @@
 
 <h2>Favorites</h2>
   <% @favorites.each do |favorite| %>
-<ul>
-  <li><%= favorite.restaurant.name %></li>
-  <li><%= favorite.restaurant.address %></li>
-  <li><%= favorite.restaurant.work_score %></li>
-</ul>
+  <div class="individual-review">
+    <ul>
+      <li><h3><a href="/restaurants/<%= favorite.restaurant.id %>"><%= favorite.restaurant.name %></a></h3></li>
+      <li><%= favorite.restaurant.address %></li>
+      <li><%= favorite.restaurant.work_score %></li>
+    </ul>
+  </div>
 <% end %>
 <h2>Reviews</h2>
 <% @reviews.each do |review| %>
 <div class="individual-review">
   <ul>
-    <li><a href="/restaurants/<%= review.restaurant.id %>"><%= review.restaurant.name %></a></li>
+    <li><h3><a href="/restaurants/<%= review.restaurant.id %>"><%= review.restaurant.name %></a></h3></li>
     <li>Workability rating: <%= review.restaurant.work_score %></li>
     <li><%= review.comments %></li>
     <li><%= link_to 'Edit', edit_restaurant_review_path(review.restaurant, review) %></li>

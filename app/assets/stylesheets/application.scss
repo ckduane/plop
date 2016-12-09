@@ -258,7 +258,7 @@ textarea{
 .interior {
   margin: 0 auto;
   padding: 30px;
-  width: 500px;
+  width: 800px;
 }
 
 .interior ul{
@@ -294,7 +294,7 @@ textarea{
 .individual-review {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-start;
   border-bottom: 2px dashed #3AB795;
   width: 100%;
   padding: 30px;
