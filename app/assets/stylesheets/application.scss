@@ -34,6 +34,11 @@ body {
   margin: 0 auto;
 }
 
+.home-search-bar {
+  order: 2;
+  position: relative;
+}
+
 .search-bar {
   width: 800px;
   max-width: 90%;
@@ -43,6 +48,11 @@ body {
   border: none;
   box-shadow: 5px 5px 15px #888888;
   margin-right: 5px;
+}
+
+.fa-search {
+  postition: absolute;
+  margin-left: -50px;
 }
 
 .search-bar:focus{
@@ -121,9 +131,6 @@ span.slogan {
   text-shadow: 5px 5px 15px #333333;
 }
 
-.home-search-bar {
-  order: 2;
-}
 
 @media only screen and (max-width: 1000px) {
   .search-bar {
@@ -339,3 +346,4 @@ input {
   margin: 15px;
   font-size: 16px;
 }
+
