@@ -45,6 +45,8 @@ class ReviewsController < ApplicationController
     redirect_to :user_profile
   end
 
+
+
   private
 
   def review_params

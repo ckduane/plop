@@ -9,6 +9,7 @@
       </ul>
       <% if session[:user_id] %>
         <%= link_to "Add Review", new_restaurant_review_path(@restaurant.id), class: :"add-review" %>
+        <%= link_to "Favorite", favorite_path(@restaurant.id), class: :"add-favorite" %>
       <%end %>
     </div>
     <div class="restaurant-scores">

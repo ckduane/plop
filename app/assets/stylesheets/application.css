@@ -300,7 +300,7 @@ textarea{
  order: 2;
 }
 
-.add-review{
+.add-review, .add-favorite{
   background-color: #2D9376;
   text-align: center;
   color: white;
