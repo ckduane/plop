@@ -1,34 +1,36 @@
-<%if @message%>
+<div class="interior">
+  <%if @message%>
 
-<%=@message%>
+  <%=@message%>
 
-<%elsif @restaurants%>
-<h3>Hey, we couldn't find what you're looking for.</h3>
-<h3>So we created it for ya!</h3>
-<% @restaurants.each do |restaurant| %>
-<ul>
-  <li><%=link_to restaurant.name, restaurant_path(restaurant)%></li>
-</ul>
-<%end%>
+  <%elsif @restaurants%>
+  <h3>Hey, we couldn't find what you're looking for.</h3>
+  <h3>So we created it for ya!</h3>
+  <% @restaurants.each do |restaurant| %>
+  <ul>
+    <li><%=link_to restaurant.name, restaurant_path(restaurant)%></li>
+  </ul>
+  <%end%>
 
-<%else%>
-
-
-<h3>Location</h3>
-
-<%@restaurants_by_location.each do |restaurant|%>
-<ul>
-  <li><%=link_to restaurant.name, restaurant_path(restaurant)%></li>
-</ul>
-<%end%>
+  <%else%>
 
 
-<h3>Name</h3>
+  <h3>Location</h3>
 
-<%@restaurants_by_name.each do |restaurant|%>
-<ul>
-  <li><%=link_to restaurant.name, restaurant_path(restaurant)%></li>
-</ul>
-<%end%>
+  <%@restaurants_by_location.each do |restaurant|%>
+  <ul>
+    <li><%=link_to restaurant.name, restaurant_path(restaurant)%></li>
+  </ul>
+  <%end%>
 
-<%end%>
+
+  <h3>Name</h3>
+
+  <%@restaurants_by_name.each do |restaurant|%>
+  <ul>
+    <li><%=link_to restaurant.name, restaurant_path(restaurant)%></li>
+  </ul>
+  <%end%>
+
+  <%end%>
+</div>
