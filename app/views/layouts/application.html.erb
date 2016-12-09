@@ -16,19 +16,20 @@
       <div class="links">
         <span><%= link_to "Home", root_path %></span>
         <% if session[:user_id].nil? %>
-          <span><%= link_to "Register", user_register_path %></span>
-          <span><%= link_to "Login", user_login_path %></span>
+        <span><%= link_to "Register", user_register_path %></span>
+        <span><%= link_to "Login", user_login_path %></span>
         <% elsif @user.nil? == false %>
-          <span><%= link_to find_current_user.username, user_profile_path(find_current_user) %></span>
-          <span><%= link_to "Log Out", user_logout_path %></span>
-        </div>
-      <% end %>
+        <span><%= link_to find_current_user.username, user_profile_path(find_current_user) %></span>
+        <span><%= link_to "Log Out", user_logout_path %></span>
+        <% end %>
       </div>
-      <div class="search">
-        <span class="slogan">Find a Place to Plop</span>
-        <span class="home-search-bar"><%=render partial: 'home/search'%></span>
-      </div>
-    </nav>
+
+    </div>
+    <div class="search">
+      <span class="slogan">Find a Place to Plop</span>
+      <span class="home-search-bar"><%=render partial: 'home/search'%></span>
+    </div>
+  </nav>
   <div class="container">
     <%= yield %>
   </div>
