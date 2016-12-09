@@ -8,7 +8,7 @@ before_action :verifyLogin
   def favorite
     @restaurant = Restaurant.find(params[:restaurant_id])
     if @user.favorites.include?(@restaurant)
-      redirect_to restaurant_path(@restaurant.id), :notice => "You've already done this."
+      redirect_to restaurant_path(@restaurant.id)
     else
       Favorite.create(user_id: @user.id, restaurant_id: @restaurant.id)
       redirect_to restaurant_path(@restaurant.id)

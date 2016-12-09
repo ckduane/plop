@@ -1,32 +1,14 @@
-<%= form_for @user, url: user_register_path do |f| %>
-<table>
-  <tr>
-    <th colspan="2">Register</th>
-    <th></th>
-  </tr>
-<tr>
-  <td><%= f.label "Username: "  %></td>
-  <td><%= f.text_field :username, placeholder: "Username" %></td>
-</tr>
-<tr>
-  <td><%= f.label "Email: " %></td>
-  <td><%= f.text_field :email, placeholder: "Email"  %></td>
-</tr>
-<tr>
-  <td><%= f.label "Password: " %></td>
-  <td><%= f.password_field :password, placeholder: "Password"  %></td>
-</tr>
-<tr>
-  <td><%= f.submit "Register" %></td>
-</tr>
-</table>
-<% end %>
+<div class="interior">
+  <h2>Register</h2>
 
-<ul>
-<% if @errors %>
-  <% @errors.each do |error| %>
-  <li><%= error %></li>
+  <% if @errors %>
+    <%= render "shared/error" %>
   <% end %>
-<% end %>
-</ul>
 
+  <%= form_for @user, url: user_register_path do |f| %>
+    <%= f.text_field :username, placeholder: "Username" %>
+    <%= f.text_field :email, placeholder: "Email"  %>
+    <%= f.password_field :password, placeholder: "Password"  %>
+    <%= f.submit "Register" %>
+  <% end %>
+</div>

@@ -15,7 +15,7 @@
     <% @r_workability.each do |restaurant| %>
       <tr>
         <td><h3><%= link_to restaurant.name, restaurant_path(restaurant) %></h3></td>
-        <td class="score"><%= restaurant.work_score %></td>
+        <td class="score"><%= show_stars(restaurant.work_score) %></td>
       </tr>
       <tr>
         <td colspan="2"><%= restaurant.address %></td>
@@ -27,7 +27,7 @@
     <% @r_parking.each do |restaurant| %>
       <tr>
         <td><h3><%= link_to restaurant.name, restaurant_path(restaurant) %></h3></td>
-        <td class="score"><%= restaurant.score("parking_rating") %></td>
+        <td class="score"><%= show_stars(restaurant.score("parking_rating")) %></td>
       </tr>
       <tr>
         <td colspan="2"><%= restaurant.address %></td>
@@ -39,7 +39,7 @@
     <% @r_wifi.each do |restaurant| %>
       <tr>
         <td><h3><%= link_to restaurant.name, restaurant_path(restaurant) %></h3></td>
-        <td class="score"><%= restaurant.score("wifi_rating") %></td>
+        <td class="score"><%= show_stars(restaurant.score("wifi_rating")) %></td>
       </tr>
       <tr>
         <td colspan="2"><%= restaurant.address %></td>
@@ -51,7 +51,7 @@
     <% @r_seating.each do |restaurant| %>
       <tr>
         <td><h3><%= link_to restaurant.name, restaurant_path(restaurant) %></h3></td>
-        <td class="score"><%= restaurant.score("seating_rating") %></td>
+        <td class="score"><%= show_stars(restaurant.score("seating_rating")) %></td>
       </tr>
       <tr>
         <td colspan="2"><%= restaurant.address %></td>
@@ -63,7 +63,7 @@
     <% @r_outlet.each do |restaurant| %>
       <tr>
         <td><h3><%= link_to restaurant.name, restaurant_path(restaurant) %></h3></td>
-        <td class="score"><%= restaurant.score("outlet_rating") %></td>
+        <td class="score"><%= show_stars(restaurant.score("outlet_rating")) %></td>
       </tr>
       <tr>
         <td colspan="2"><%= restaurant.address %></td>
@@ -75,7 +75,7 @@
     <% @r_atmosphere.each do |restaurant| %>
       <tr>
         <td><h3><%= link_to restaurant.name, restaurant_path(restaurant) %></h3></td>
-        <td class="score"><%= restaurant.score("atmosphere_rating") %></td>
+        <td class="score"><%= show_stars(restaurant.score("atmosphere_rating")) %></td>
       </tr>
       <tr>
         <td colspan="2"><%= restaurant.address %></td>
