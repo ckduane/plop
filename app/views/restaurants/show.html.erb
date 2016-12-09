@@ -5,7 +5,7 @@
       <h3>Workability Score: <%=@restaurant.work_score%></h3>
       <ul>
         <li><%=@restaurant.address%></li>
-        <li><a href=<%=@restaurant.link%>>Yelp Link</a></li>
+        <li><h4><a href=<%=@restaurant.link%>><i class="fa fa-yelp" aria-hidden="true"></i> Yelp Link</a></h4></li>
       </ul>
       <% if session[:user_id] && !find_review %>
         <%= link_to new_restaurant_review_path(@restaurant.id), class: :"add-review" do %>
