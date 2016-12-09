@@ -7,10 +7,20 @@
         <li><%=@restaurant.address%></li>
         <li><a href=<%=@restaurant.link%>>Yelp Link</a></li>
       </ul>
-      <% if session[:user_id] %>
-        <%= link_to "Add Review", new_restaurant_review_path(@restaurant.id), class: :"add-review" %>
-        <%= link_to "Favorite", favorite_path(@restaurant.id), class: :"add-favorite" %>
+      <% if session[:user_id] && !find_review %>
+        <%= link_to new_restaurant_review_path(@restaurant.id), class: :"add-review" do %>
+        <i class="fa fa-plus" aria-hidden="true"></i> Add Review
+        <% end %>
       <%end %>
+      <% if session[:user_id] && !find_favorite%>
+        <%= link_to favorite_path(@restaurant.id), class: :"add-favorite" do %>
+        <i class="fa fa-heart-o" aria-hidden="true"></i> Add Favorite
+        <% end %>
+      <% elsif session[:user_id] %>
+        <%= link_to favorite_path(@restaurant.id), class: :"add-favorite" do %>
+        <i class="fa fa-heart" aria-hidden="true"></i> Favorite!
+        <% end %>
+      <% end %>
     </div>
     <div class="restaurant-scores">
       <ul>

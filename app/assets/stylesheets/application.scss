@@ -313,3 +313,21 @@ textarea{
 .no-review{
   padding: 30px;
 }
+
+.errors {
+  background: #DB3A34;
+  color: white;
+  border-radius: 10px;
+  padding: 10px 30px;
+}
+
+.add-review-errors {
+  color: red;
+}
+.field_with_errors {
+  display: inline;
+}
+
+input {
+  padding: 30px;
+}
