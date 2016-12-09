@@ -13,6 +13,7 @@ class ReviewsController < ApplicationController
     @review.restaurant_id = params[:restaurant_id]
     @review.user_id = session[:user_id]
     if @review.save
+      User.find(session[:user_id]).add_points
       redirect_to "/restaurants/#{@review.restaurant_id}"
     else
       @errors = @review.errors.full_messages
