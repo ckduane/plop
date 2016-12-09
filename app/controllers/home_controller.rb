@@ -8,6 +8,10 @@ before_action :verifyLogin
     @r_seating = Restaurant.sort_by("seating_rating").first(6)
     @r_outlet = Restaurant.sort_by("outlet_rating").first(6)
     @r_atmosphere = Restaurant.sort_by("atmosphere_rating").first(6)
+
+    @long = params["long"]
+    @lat = params["lat"]
+
   end
 
   def search

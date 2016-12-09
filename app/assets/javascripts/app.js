@@ -1,3 +1,12 @@
+navigator.geolocation.getCurrentPosition(function(position) {
+  var location = {lat: position.coords.latitude, long: position.coords.longitude}
+  var ajaxRequest = $.ajax({
+    method: 'GET',
+    url: '/',
+    data: location})
+
+});
+
 $(document).on('turbolinks:load', function(){
   $(".index-sorts").children().hide()
   $('.index-categories').find('li').first().addClass('active')
