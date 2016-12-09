@@ -1,3 +1,4 @@
+require 'pry'
 class Restaurant < ActiveRecord::Base
   has_many :reviews
   has_many :favorites
@@ -23,14 +24,24 @@ class Restaurant < ActiveRecord::Base
     end
   end
 
-  def self.sort_by_workability
-    restaurants = self.all
-    restaurants.sort {|a, b| b.work_score <=> a.work_score}
+  def self.sort_by_workability(postal_code = "")
+    if postal_code != ""
+      restaurants = Restaurant.where("address LIKE ?", "%#{postal_code}")
+      return restaurants.sort {|a, b| b.work_score <=> a.work_score}
+    else
+      restaurants = Restaurant.all
+      return restaurants.sort {|a, b| b.work_score <=> a.work_score}
+    end
   end
 
-  def self.sort_by(rating) #must pass in rating in quotes
-    restaurants = self.all
-    restaurants.sort {|a, b| b.score(rating) <=> a.score(rating)}
+  def self.sort_by_rating(rating, postal_code) #must pass in rating in quotes
+    if postal_code != ""
+      restaurants = Restaurant.where("address LIKE ?", "%#{postal_code}")
+      return restaurants.sort {|a, b| b.score(rating) <=> a.score(rating)}
+    else
+      restaurants = Restaurant.all
+      return restaurants.sort {|a, b| b.score(rating) <=> a.score(rating)}
+    end
   end
 
 end

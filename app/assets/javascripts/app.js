@@ -1,13 +1,18 @@
+if (window.location.pathname === '/'){
 navigator.geolocation.getCurrentPosition(function(position) {
   var location = {lat: position.coords.latitude, long: position.coords.longitude}
   var ajaxRequest = $.ajax({
     method: 'GET',
     url: '/',
-    data: location})
-
+    data: location
+  }).done(function(response){
+    $(".container").html(response)
+    setupTabs()
+  })
 });
+}
 
-$(document).on('turbolinks:load', function(){
+function setupTabs(){
   $(".index-sorts").children().hide()
   $('.index-categories').find('li').first().addClass('active')
   $("table").eq(0).show()
@@ -18,4 +23,4 @@ $(document).on('turbolinks:load', function(){
     $(".index-sorts").children().hide()
     $("table").eq(position).toggle()
   })
-})
+}
