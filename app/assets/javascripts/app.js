@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).on('turbolinks:load', function(){
   $(".index-sorts").children().hide()
   $('.index-categories').find('li').first().addClass('active')
   $("table").eq(0).show()
