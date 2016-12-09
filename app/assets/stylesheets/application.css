@@ -150,6 +150,7 @@ footer{
 
 .index-categories li {
   padding-bottom: 30px;
+  cursor: pointer;
 }
 
 .index-sorts {
