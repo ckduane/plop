@@ -2,6 +2,7 @@
   <div class="restaurant-overview">
     <div class="restaurant-details">
       <h2><%=@restaurant.name%></h2>
+      <div><%= show_stars(@restaurant.work_score)%></div>
       <h3>Workability Score: <%=@restaurant.work_score%></h3>
       <ul>
         <li><%=@restaurant.address%></li>
@@ -24,11 +25,11 @@
     </div>
     <div class="restaurant-scores">
       <ul>
-        <li>Parking: <%=@restaurant.score("parking_rating")%></li>
-        <li>Seating: <%=@restaurant.score("seating_rating")%></li>
-        <li>Wifi: <%=@restaurant.score("wifi_rating")%></li>
-        <li>Outlets:<%=@restaurant.score("outlet_rating")%></li>
-        <li>Atmosphere: <%=@restaurant.score("atmosphere_rating")%></li>
+        <li><h4>Parking: <%=@restaurant.score("parking_rating")%></h4></li>
+        <li><h4>Seating: <%=@restaurant.score("seating_rating")%></h4></li>
+        <li><h4>Wifi: <%=@restaurant.score("wifi_rating")%></h4></li>
+        <li><h4>Outlets: <%=@restaurant.score("outlet_rating")%></h4></li>
+        <li><h4>Atmosphere: <%=@restaurant.score("atmosphere_rating")%></h4></li>
       </ul>
     </div>
   </div>
@@ -41,6 +42,8 @@
         <div class="individual-stats">
           <p>Username: <%= review.user.username %></p>
           <p>Points: <%= review.user.points %></p>
+        </div>
+        <div class="individual-scores">
           <p>Parking: <%= review.parking_rating %></p>
           <p>Seating: <%= review.seating_rating %></p>
           <p>Wifi: <%= review.wifi_rating %></p>
