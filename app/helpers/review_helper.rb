@@ -10,4 +10,8 @@ module ReviewHelper
       return score
     end
   end
+
+  def review_stars
+
+  end
 end
