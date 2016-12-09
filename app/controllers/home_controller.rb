@@ -1,13 +1,34 @@
+require 'pry'
 class HomeController < ApplicationController
 before_action :verifyLogin
 
   def index
-    @r_workability = Restaurant.sort_by_workability.first(6)
-    @r_parking = Restaurant.sort_by("parking_rating").first(6)
-    @r_wifi = Restaurant.sort_by("wifi_rating").first(6)
-    @r_seating = Restaurant.sort_by("seating_rating").first(6)
-    @r_outlet = Restaurant.sort_by("outlet_rating").first(6)
-    @r_atmosphere = Restaurant.sort_by("atmosphere_rating").first(6)
+    long = params["long"]
+    lat = params["lat"]
+    geo_localization = "#{lat},#{long}"
+    query = Geocoder.search(geo_localization).first
+    if query.present? && request.xhr?
+      puts "QUERY PRESENT!!!"
+      @postal_code = query.postal_code
+      @r_workability = Restaurant.sort_by_workability(@postal_code).first(6)
+      @r_parking = Restaurant.sort_by_rating("parking_rating", @postal_code).first(6)
+      @r_wifi = Restaurant.sort_by_rating("wifi_rating", @postal_code).first(6)
+      @r_seating = Restaurant.sort_by_rating("seating_rating", @postal_code).first(6)
+      @r_outlet = Restaurant.sort_by_rating("outlet_rating", @postal_code).first(6)
+      @r_atmosphere = Restaurant.sort_by_rating("atmosphere_rating", @postal_code).first(6)
+      puts "@postal_code: #{@postal_code}"
+      puts "@r_parking: #{@r_parking}"
+      render :index, :layout => false
+      # binding.pry
+    else
+      puts "QUERY ABSENT!!!"
+      @r_workability = Restaurant.sort_by_workability.first(6)
+      @r_parking = Restaurant.sort_by_rating("parking_rating", "").first(6)
+      @r_wifi = Restaurant.sort_by_rating("wifi_rating", "").first(6)
+      @r_seating = Restaurant.sort_by_rating("seating_rating", "").first(6)
+      @r_outlet = Restaurant.sort_by_rating("outlet_rating", "").first(6)
+      @r_atmosphere = Restaurant.sort_by_rating("atmosphere_rating", "").first(6)
+    end
   end
 
   def search
