@@ -1,4 +1,7 @@
 <%= form_tag "/search", method: "get" do  %>
 <%= text_field_tag(:q, "", class: "search-bar", placeholder: "search for your favorite coffee shop or by location") %>
 <%= submit_tag("Search", class: "search-button") %>
+
+    <i class="fa fa-search" aria-hidden="true"></i>
+
 <% end %>

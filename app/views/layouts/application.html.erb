@@ -17,10 +17,16 @@
         <span><%= link_to "Home", root_path %></span>
         <% if session[:user_id].nil? %>
         <span><%= link_to "Register", user_register_path %></span>
-        <span><%= link_to "Login", user_login_path %></span>
+        <span><%= link_to user_login_path do %>
+          <i class="fa fa-sign-in" aria-hidden="true"></i> Login
+        <% end %>
+        </span>
         <% elsif @user.nil? == false %>
         <span><%= link_to find_current_user.username, user_profile_path(find_current_user) %></span>
-        <span><%= link_to "Log Out", user_logout_path %></span>
+        <span><%= link_to user_logout_path do %>
+          <i class="fa fa-sign-out" aria-hidden="true"></i> Log Out
+        <% end %>
+        </span>
         <% end %>
       </div>
 
