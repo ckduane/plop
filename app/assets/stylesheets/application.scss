@@ -300,9 +300,13 @@ textarea{
   padding: 30px;
 }
 
+input[type="radio"]{
+  display: inline;
+  width: 20px;
+}
+
 .individual-stats{
  order: 1;
-
 }
 
 .individual-comments{
