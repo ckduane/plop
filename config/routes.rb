@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   post '/users/login' => 'users#validate'
   get '/users/logout' => 'users#logout', as: "user_logout"
   get '/users/:id' => 'users#profile', as: "user_profile"
+  get '/restaurants/:restaurant_id/favorites' => 'restaurants#favorite', as: "favorite"
+
 
   resources :restaurants, only: [:show] do
     resources :reviews
