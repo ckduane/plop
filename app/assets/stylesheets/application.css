@@ -29,7 +29,7 @@ body {
   width: 70%;
   background-color: white;
   display: flex;
-  /*justify-content: space-between;*/
+  /*justify-content: space-around;*/
   /*padding: 50px;*/
   margin: 0 auto;
 }
@@ -50,6 +50,7 @@ body {
 }
 
 .search-button {
+  display: inline;
   background-color: #2d9376;
   color: white;
   padding: 15px;
@@ -121,6 +122,22 @@ span.slogan {
 
 .home-search-bar {
   order: 2;
+}
+
+@media only screen and (max-width: 1000px) {
+  .search-bar {
+    width: 500px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .search-bar {
+    width: 350px;
+    font-size: 14px;
+  }
+  .search-button {
+    justify-content: center;
+  }
 }
 
 li {
@@ -204,18 +221,71 @@ h3 a {
   color: #333333;
 }
 
-@media only screen and (max-width: 1000px) {
-  .search-bar {
-    width: 500px;
-  }
+form {
+  padding: 10px;
 }
 
-@media only screen and (max-width: 800px) {
-  .search-bar {
-    width: 350px;
-    font-size: 14px;
-  }
-  .search-button {
-    justify-content: center;
-  }
+label {
+  display: block;
+  padding-top: 10px;
+}
+
+input[type="submit"] {
+  display: block;
+  border: none;
+  background: #2D9376;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  font-size: 16px;
+}
+
+textarea{
+  border-radius: 10px;
+  border: 2px solid #3AB795;
+  font-size: 16px;
+}
+
+.interior {
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.interior ul{
+  margin:0;
+  padding: 0;
+}
+
+.restaurant-details {
+  display: flex;
+}
+
+.restaurant-reviews {
+  border-top: 2px solid #3AB795;
+  width: 100%;
+  display: flex;
+  /*justify-content: space-around;*/
+}
+
+.individual-review {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.individual-stats{
+ order: 1;
+
+}
+
+.individual-comments{
+ order: 2;
+}
+
+.add-review{
+  background-color: #2D9376;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
 }

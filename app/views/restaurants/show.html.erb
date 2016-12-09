@@ -1,39 +1,40 @@
-<div class="restaurant-details">
-  <h2><%=@restaurant.name%></h2>
-  <h3>Workability Score: <%=@restaurant.work_score%></h3>
-  <ul>
-    <li><%=@restaurant.address%></li>
-    <li><a href=<%=@restaurant.link%>>Yelp Link</a></li>
-  </ul>
-  <% if session[:user_id] %>
-    <%= link_to "Add Review", new_restaurant_review_path(@restaurant.id) %>
-  <%end %>
-</div>
-<div class="restaurant-scores">
-  <ul>
-    <li>Parking: <%=@restaurant.score("parking_rating")%></li>
-    <li>Seating: <%=@restaurant.score("seating_rating")%></li>
-    <li>Wifi: <%=@restaurant.score("wifi_rating")%></li>
-    <li>Outlets:<%=@restaurant.score("outlet_rating")%></li>
-    <li>Atmosphere: <%=@restaurant.score("atmosphere_rating")%></li>
-  </ul>
-</div>
-<div class="restaurant-reviews">
-<% @restaurant.reviews.each do |review| %>
-  <div class="individual-review">
-    <div class="individual-stats"
-      <p>Username: <%= review.user.username %></p>
-      <p>Points: <%= review.user.points %></p>
-      <p>Parking: <%= review.parking_rating %></p>
-      <p>Seating: <%= review.seating_rating %></p>
-      <p>Wifi: <%= review.wifi_rating %></p>
-      <p>Outlet: <%= review.outlet_rating %></p>
-      <p>Atmosphere: <%= review.atmosphere_rating %></p>
-    </div>
-    <div class="individual-comments">
-      <p><%= review.comments %></p>
-    </div>
+<div class="interior">
+  <div class="restaurant-details">
+    <h2><%=@restaurant.name%></h2>
+    <h3>Workability Score: <%=@restaurant.work_score%></h3>
+    <ul>
+      <li><%=@restaurant.address%></li>
+      <li><a href=<%=@restaurant.link%>>Yelp Link</a></li>
+    </ul>
+    <% if session[:user_id] %>
+      <%= link_to "Add Review", new_restaurant_review_path(@restaurant.id), class: :"add-review" %>
+    <%end %>
   </div>
-<% end %>
-
+  <div class="restaurant-scores">
+    <ul>
+      <li>Parking: <%=@restaurant.score("parking_rating")%></li>
+      <li>Seating: <%=@restaurant.score("seating_rating")%></li>
+      <li>Wifi: <%=@restaurant.score("wifi_rating")%></li>
+      <li>Outlets:<%=@restaurant.score("outlet_rating")%></li>
+      <li>Atmosphere: <%=@restaurant.score("atmosphere_rating")%></li>
+    </ul>
+  </div>
+  <div class="restaurant-reviews">
+  <% @restaurant.reviews.each do |review| %>
+    <div class="individual-review">
+      <div class="individual-stats">
+        <p>Username: <%= review.user.username %></p>
+        <p>Points: <%= review.user.points %></p>
+        <p>Parking: <%= review.parking_rating %></p>
+        <p>Seating: <%= review.seating_rating %></p>
+        <p>Wifi: <%= review.wifi_rating %></p>
+        <p>Outlet: <%= review.outlet_rating %></p>
+        <p>Atmosphere: <%= review.atmosphere_rating %></p>
+      </div>
+      <div class="individual-comments">
+        <p><%= review.comments %></p>
+      </div>
+    </div>
+  <% end %>
+  </div>
 </div>

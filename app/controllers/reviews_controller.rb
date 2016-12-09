@@ -6,9 +6,11 @@ class ReviewsController < ApplicationController
   end
 
   def edit
+    @restaurant = Restaurant.find(params[:restaurant_id])
   end
 
   def create
+    @restaurant = Restaurant.find(params[:restaurant_id])
     @review = Review.new(review_params)
     @review.restaurant_id = params[:restaurant_id]
     @review.user_id = session[:user_id]
@@ -25,6 +27,7 @@ class ReviewsController < ApplicationController
   end
 
   def new
+    @restaurant = Restaurant.find(params[:restaurant_id])
     @review = Restaurant.find(params[:restaurant_id]).reviews.new
   end
 
