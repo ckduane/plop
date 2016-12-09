@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get '/search' => "home#search"
 
   root to: 'home#index'
+  # post '/' => 'home#location'
 
   get '/users/register' => 'users#register', as: "user_register"
   post '/users/register' => 'users#create'
