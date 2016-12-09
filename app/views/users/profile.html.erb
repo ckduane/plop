@@ -8,7 +8,7 @@
     <ul>
       <li><h3><a href="/restaurants/<%= favorite.restaurant.id %>"><%= favorite.restaurant.name %></a></h3></li>
       <li><%= favorite.restaurant.address %></li>
-      <li><%= favorite.restaurant.work_score %></li>
+      <li><%= favorite.restaurant.work_score.round(1) %></li>
     </ul>
   </div>
 <% end %>
@@ -17,7 +17,7 @@
 <div class="individual-review">
   <ul>
     <li><h3><a href="/restaurants/<%= review.restaurant.id %>"><%= review.restaurant.name %></a></h3></li>
-    <li>Workability rating: <%= review.restaurant.work_score %></li>
+    <li>Workability rating: <%= review.restaurant.work_score.round(1) %></li>
     <li><%= review.comments %></li>
     <li><%= link_to 'Edit', edit_restaurant_review_path(review.restaurant, review) %></li>
     <li><%= link_to 'Delete', restaurant_review_path(review.restaurant, review), :method => :delete %></li>

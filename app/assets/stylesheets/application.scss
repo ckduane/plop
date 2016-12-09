@@ -138,6 +138,7 @@ span.slogan {
   font-size: 50px;
   order: 1;
   text-shadow: 5px 5px 15px $black;
+  margin-top: 200px;
 }
 
 @media only screen and (max-width: 1100px) {
@@ -341,7 +342,7 @@ textarea{
   width: 60%;
 }
 
-.add-review, .add-favorite{
+.add-review, .add-favorite, .favorited{
   background-color: $dark-green;
   text-align: center;
   color: white;
@@ -351,6 +352,10 @@ textarea{
   display: block;
 }
 
+.favorited{
+  cursor: default;
+}
+
 input[type="radio"]{
   display: inline;
   width: 20px;
@@ -358,6 +363,7 @@ input[type="radio"]{
 
 .no-review{
   padding: 30px;
+  color: red;
 }
 
 .errors {

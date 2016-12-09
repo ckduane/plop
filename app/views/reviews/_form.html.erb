@@ -127,28 +127,29 @@
     <label class="star-atmosphere star-atmosphere-1" for="star-atmosphere-1" ></label>
   </div>
 
-<% if @errors %>
-  <% if @review.errors[:atmosphere_rating][1]%>
-    <div class="add-review-errors">
-      <p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-      <%= @review.errors[:atmosphere_rating][1]%></p>
-    </div>
-    <% elsif @review.errors[:atmosphere_rating][0] %>
-    <div class="add-review-errors">
-      <p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-      <%= @review.errors[:atmosphere_rating][0]%></p>
-    </div>
-  <% end %>
-<% end %>
-
-  <%= f.label :comments %>
-    <% if @review.errors[:comments][0] %>
+  <% if @errors %>
+    <% if @review.errors[:atmosphere_rating][1]%>
       <div class="add-review-errors">
         <p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-        <%= @review.errors[:comments][0] %></p>
+        <%= @review.errors[:atmosphere_rating][1]%></p>
+      </div>
+      <% elsif @review.errors[:atmosphere_rating][0] %>
+      <div class="add-review-errors">
+        <p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+        <%= @review.errors[:atmosphere_rating][0]%></p>
+      </div>
     <% end %>
-  <%= f.text_area :comments, size: "60x12" %>
-  <%= f.submit "Add Review" %>
+  <% end %>
 
-<% end %>
+    <%= f.label :comments %>
+      <% if @review.errors[:comments][0] %>
+        <div class="add-review-errors">
+          <p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+          <%= @review.errors[:comments][0] %></p>
+        </div>
+      <% end %>
+    <%= f.text_area :comments, size: "60x12" %>
+    <%= f.submit "Add Review" %>
+
+  <% end %>
 </div>
