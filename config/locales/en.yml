@@ -21,3 +21,35 @@
 
 en:
   hello: "Hello world"
+
+en:
+  activerecord:
+    attributes:
+      review:
+        outlet_rating: "Outlet rating"
+        wifi_rating: "Wifi rating"
+        seating_rating: "Seating rating"
+        parking_rating: "Parking rating"
+        atmosphere_rating: "Atmosphere rating"
+        comments: "Comments"
+    errors:
+      models:
+        review:
+          attributes:
+            outlet_rating:
+              blank: "cannot be blank"
+              inclusion: "Outlet rating must be between 1 and 5"
+            wifi_rating:
+              blank: "cannot be blank"
+              inclusion: "Wifi rating must be between 1 and 5"
+            seating_rating:
+              blank: "cannot be blank"
+              inclusion: "Seating rating must be between 1 and 5"
+            parking_rating:
+              blank: "cannot be blank"
+              inclusion: "Parking rating must be between 1 and 5"
+            atmosphere_rating:
+              blank: "cannot be blank"
+              inclusion: "Atmosphere rating must be between 1 and 5"
+            comments:
+              blank: "Comments cannot be blank"

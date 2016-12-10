@@ -8,29 +8,31 @@
   <h3>So we created it for ya!</h3>
   <% @restaurants.each do |restaurant| %>
   <ul>
-    <li><%=link_to restaurant.name, restaurant_path(restaurant)%></li>
+    <li><h3><%=link_to restaurant.name, restaurant_path(restaurant)%></h3></li>
   </ul>
   <%end%>
 
   <%else%>
 
+  <% if !@restaurants_by_location.empty? %>
+    <h2>Location</h2>
+      <% @restaurants_by_location.each do |restaurant|%>
+    <ul>
+      <li><h3><%=link_to restaurant.name, restaurant_path(restaurant)%></h3></li>
+    </ul>
+    <%end%>
+  <% end %>
 
-  <h3>Location</h3>
-
-  <%@restaurants_by_location.each do |restaurant|%>
-  <ul>
-    <li><%=link_to restaurant.name, restaurant_path(restaurant)%></li>
-  </ul>
+  <% if !@restaurants_by_name.empty? %>
+    <h2>Name</h2>
+      <%@restaurants_by_name.each do |restaurant|%>
+    <ul>
+      <li><h3><%=link_to restaurant.name, restaurant_path(restaurant)%></h3></li>
+    </ul>
   <%end%>
+  <% end %>
 
 
-  <h3>Name</h3>
-
-  <%@restaurants_by_name.each do |restaurant|%>
-  <ul>
-    <li><%=link_to restaurant.name, restaurant_path(restaurant)%></li>
-  </ul>
-  <%end%>
 
   <%end%>
 </div>

@@ -17,7 +17,12 @@
     <% @r_workability.each do |restaurant| %>
       <tr>
         <td><h3><%= link_to restaurant.name, restaurant_path(restaurant) %></h3></td>
-        <td class="score"><%= restaurant.work_score %></td>
+        <% if restaurant.work_score != 0 %>
+          <td class="score"><%= review_zero?(show_stars(restaurant.work_score)) %></td>
+        <% else %>
+          <td><h3><i class="fa fa-plug" aria-hidden="true"></i>
+ not rated yet!</h3></td>
+        <% end %>
       </tr>
       <tr>
         <td colspan="2"><%= restaurant.address %></td>
@@ -29,7 +34,12 @@
     <% @r_parking.each do |restaurant| %>
       <tr>
         <td><h3><%= link_to restaurant.name, restaurant_path(restaurant) %></h3></td>
-        <td class="score"><%= restaurant.score("parking_rating") %></td>
+        <% if restaurant.score("parking_rating") != 0 %>
+          <td class="score"><%= show_stars(restaurant.score("parking_rating")) %></td>
+        <% else %>
+          <td><h3><i class="fa fa-plug" aria-hidden="true"></i>
+ not rated yet!</h3></td>
+        <% end %>
       </tr>
       <tr>
         <td colspan="2"><%= restaurant.address %></td>
@@ -41,7 +51,12 @@
     <% @r_wifi.each do |restaurant| %>
       <tr>
         <td><h3><%= link_to restaurant.name, restaurant_path(restaurant) %></h3></td>
-        <td class="score"><%= restaurant.score("wifi_rating") %></td>
+        <% if restaurant.score("wifi_rating") != 0 %>
+        <td class="score"><%= show_stars(restaurant.score("wifi_rating")) %></td>
+        <% else %>
+          <td><h3><i class="fa fa-plug" aria-hidden="true"></i>
+ not rated yet!</h3></td>
+        <% end %>
       </tr>
       <tr>
         <td colspan="2"><%= restaurant.address %></td>
@@ -53,7 +68,12 @@
     <% @r_seating.each do |restaurant| %>
       <tr>
         <td><h3><%= link_to restaurant.name, restaurant_path(restaurant) %></h3></td>
-        <td class="score"><%= restaurant.score("seating_rating") %></td>
+        <% if restaurant.score("seating_rating") != 0 %>
+        <td class="score"><%= show_stars(restaurant.score("seating_rating")) %></td>
+        <% else %>
+          <td><h3><i class="fa fa-plug" aria-hidden="true"></i>
+ not rated yet!</h3></td>
+        <% end %>
       </tr>
       <tr>
         <td colspan="2"><%= restaurant.address %></td>
@@ -65,7 +85,12 @@
     <% @r_outlet.each do |restaurant| %>
       <tr>
         <td><h3><%= link_to restaurant.name, restaurant_path(restaurant) %></h3></td>
-        <td class="score"><%= restaurant.score("outlet_rating") %></td>
+        <% if restaurant.score("outlet_rating") != 0 %>
+        <td class="score"><%= show_stars(restaurant.score("outlet_rating")) %></td>
+        <% else %>
+          <td><h3><i class="fa fa-plug" aria-hidden="true"></i>
+ not rated yet!</h3></td>
+        <% end %>
       </tr>
       <tr>
         <td colspan="2"><%= restaurant.address %></td>
@@ -77,7 +102,12 @@
     <% @r_atmosphere.each do |restaurant| %>
       <tr>
         <td><h3><%= link_to restaurant.name, restaurant_path(restaurant) %></h3></td>
-        <td class="score"><%= restaurant.score("atmosphere_rating") %></td>
+        <% if restaurant.score("atmosphere_rating") != 0 %>
+          <td class="score"><%= show_stars(restaurant.score("atmosphere_rating")) %></td>
+        <% else %>
+          <td><h3><i class="fa fa-plug" aria-hidden="true"></i>
+ not rated yet!</h3></td>
+        <% end %>
       </tr>
       <tr>
         <td colspan="2"><%= restaurant.address %></td>

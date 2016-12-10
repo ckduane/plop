@@ -1,25 +1,15 @@
-  <%= form_for :user, url: user_login_path do |f| %>
-<table>
-  <tr>
-    <th colspan="2">Login</th>
-    <th></th>
-  </tr>
-<tr>
-  <td><%= f.label "Email: " %></td>
-  <td><%= f.text_field :email, placeholder: "Email"  %></td>
-</tr>
-<tr>
-  <td><%= f.label "Password: " %></td>
-  <td><%= f.password_field :password, placeholder: "Password"  %></td>
-</tr>
-<tr>
-  <td><%= f.submit "Login" %></td>
-</tr>
-</table>
+<div class="interior">
+  <h2>Login</h2>
+
+<% if @error %>
+<div class="errors">
+<p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> <%= @error %></p>
+</div>
 <% end %>
 
-<ul>
-<% if @error %>
-  <li><%= @error %></li>
-<% end %>
-</ul>
+  <%= form_for :user, url: user_login_path do |f| %>
+    <%= f.text_field :email, placeholder: "Email"  %>
+    <%= f.password_field :password, placeholder: "Password"  %>
+    <%= f.submit "Login" %>
+  <% end %>
+</div>

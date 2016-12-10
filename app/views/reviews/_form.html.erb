@@ -1,47 +1,155 @@
-<% if @errors %>
-  <% @errors.each do |error| %>
-  <p><%= error %></p>
-  <% end %>
-<% end %>
+<div class="interior">
 
 <%= form_for [@review.restaurant, @review] do |f| %>
   <%= f.label :outlet_rating %>
-  <%= f.radio_button :outlet_rating, 1 %>
-  <%= f.radio_button :outlet_rating, 2 %>
-  <%= f.radio_button :outlet_rating, 3 %>
-  <%= f.radio_button :outlet_rating, 4 %>
-  <%= f.radio_button :outlet_rating, 5 %>
+  <div class="stars">
+    <%= f.radio_button :outlet_rating, 5, class: :"star star5", id: "star-5" %>
+    <label class="star star5" for="star-5" ></label>
+    <%= f.radio_button :outlet_rating, 4, class: :"star star4", id: "star-4"  %>
+    <label class="star star4" for="star-4" ></label>
+    <%= f.radio_button :outlet_rating, 3, class: :"star star3", id: "star-3"  %>
+    <label class="star star3" for="star-3" ></label>
+    <%= f.radio_button :outlet_rating, 2, class: :"star star2", id: "star-2"  %>
+    <label class="star star2" for="star-2" ></label>
+    <%= f.radio_button :outlet_rating, 1, class: :"star star1", id: "star-1"  %>
+    <label class="star star1" for="star-1" ></label>
+  </div>
+
+<% if @errors %>
+  <% if @review.errors[:outlet_rating][1]%>
+    <div class="add-review-errors">
+      <p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+      <%= @review.errors[:outlet_rating][1]%></p>
+    </div>
+    <% elsif @review.errors[:outlet_rating][0] %>
+    <div class="add-review-errors">
+      <p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+      <%= @review.errors[:outlet_rating][0]%></p>
+    </div>
+  <% end %>
+<% end %>
 
   <%= f.label :wifi_rating %>
-  <%= f.radio_button :wifi_rating, 1 %>
-  <%= f.radio_button :wifi_rating, 2 %>
-  <%= f.radio_button :wifi_rating, 3 %>
-  <%= f.radio_button :wifi_rating, 4 %>
-  <%= f.radio_button :wifi_rating, 5 %>
+  <div class="stars">
+    <%= f.radio_button :wifi_rating, 5, class: :"star-wifi star-wifi-5", id: "star-wifi-5" %>
+    <label class="star-wifi star-wifi-5" for="star-wifi-5" ></label>
+    <%= f.radio_button :wifi_rating, 4, class: :"star-wifi star-wifi-4", id: "star-wifi-4"  %>
+    <label class="star-wifi star-wifi-4" for="star-wifi-4" ></label>
+    <%= f.radio_button :wifi_rating, 3, class: :"star-wifi star-wifi-3", id: "star-wifi-3"  %>
+    <label class="star-wifi star-wifi-3" for="star-wifi-3" ></label>
+    <%= f.radio_button :wifi_rating, 2, class: :"star-wifi star-wifi-2", id: "star-wifi-2"  %>
+    <label class="star-wifi star-wifi-2" for="star-wifi-2" ></label>
+    <%= f.radio_button :wifi_rating, 1, class: :"star-wifi star-wifi-1", id: "star-wifi-1"  %>
+    <label class="star-wifi star-wifi-1" for="star-wifi-1" ></label>
+  </div>
+
+<% if @errors %>
+  <% if @review.errors[:wifi_rating][1]%>
+    <div class="add-review-errors">
+      <p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+      <%= @review.errors[:wifi_rating][1]%></p>
+    </div>
+    <% elsif @review.errors[:wifi_rating][0] %>
+    <div class="add-review-errors">
+      <p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+      <%= @review.errors[:wifi_rating][0]%></p>
+    </div>
+  <% end %>
+<% end %>
 
   <%= f.label :seating_rating %>
-  <%= f.radio_button :seating_rating, 1 %>
-  <%= f.radio_button :seating_rating, 2 %>
-  <%= f.radio_button :seating_rating, 3 %>
-  <%= f.radio_button :seating_rating, 4 %>
-  <%= f.radio_button :seating_rating, 5 %>
+  <div class="stars">
+    <%= f.radio_button :seating_rating, 5, class: :"star-seating star-seating-5", id: "star-seating-5" %>
+    <label class="star-seating star-seating-5" for="star-seating-5" ></label>
+    <%= f.radio_button :seating_rating, 4, class: :"star-seating star-seating-4", id: "star-seating-4"  %>
+    <label class="star-seating star-seating-4" for="star-seating-4" ></label>
+    <%= f.radio_button :seating_rating, 3, class: :"star-seating star-seating-3", id: "star-seating-3"  %>
+    <label class="star-seating star-seating-3" for="star-seating-3" ></label>
+    <%= f.radio_button :seating_rating, 2, class: :"star-seating star-seating-2", id: "star-seating-2"  %>
+    <label class="star-seating star-seating-2" for="star-seating-2" ></label>
+    <%= f.radio_button :seating_rating, 1, class: :"star-seating star-seating-1", id: "star-seating-1"  %>
+    <label class="star-seating star-seating-1" for="star-seating-1" ></label>
+  </div>
+
+<% if @errors %>
+  <% if @review.errors[:seating_rating][1]%>
+    <div class="add-review-errors">
+      <p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+      <%= @review.errors[:seating_rating][1]%></p>
+    </div>
+    <% elsif @review.errors[:seating_rating][0] %>
+    <div class="add-review-errors">
+      <p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+      <%= @review.errors[:seating_rating][0]%></p>
+    </div>
+  <% end %>
+<% end %>
 
   <%= f.label :parking_rating %>
-  <%= f.radio_button :parking_rating, 1 %>
-  <%= f.radio_button :parking_rating, 2 %>
-  <%= f.radio_button :parking_rating, 3 %>
-  <%= f.radio_button :parking_rating, 4 %>
-  <%= f.radio_button :parking_rating, 5 %>
+  <div class="stars">
+    <%= f.radio_button :parking_rating, 5, class: :"star-parking star-parking-5", id: "star-parking-5" %>
+    <label class="star-parking star-parking-5" for="star-parking-5" ></label>
+    <%= f.radio_button :parking_rating, 4, class: :"star-parking star-parking-4", id: "star-parking-4"  %>
+    <label class="star-parking star-parking-4" for="star-parking-4" ></label>
+    <%= f.radio_button :parking_rating, 3, class: :"star-parking star-parking-3", id: "star-parking-3"  %>
+    <label class="star-parking star-parking-3" for="star-parking-3" ></label>
+    <%= f.radio_button :parking_rating, 2, class: :"star-parking star-parking-2", id: "star-parking-2"  %>
+    <label class="star-parking star-parking-2" for="star-parking-2" ></label>
+    <%= f.radio_button :parking_rating, 1, class: :"star-parking star-parking-1", id: "star-parking-1"  %>
+    <label class="star-parking star-parking-1" for="star-parking-1" ></label>
+  </div>
+
+<% if @errors %>
+  <% if @review.errors[:parking_rating][1]%>
+    <div class="add-review-errors">
+      <p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+      <%= @review.errors[:parking_rating][1]%></p>
+    </div>
+    <% elsif @review.errors[:parking_rating][0] %>
+    <div class="add-review-errors">
+      <p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+      <%= @review.errors[:parking_rating][0]%></p>
+    </div>
+  <% end %>
+<% end %>
 
   <%= f.label :atmosphere_rating %>
-  <%= f.radio_button :atmosphere_rating, 1 %>
-  <%= f.radio_button :atmosphere_rating, 2 %>
-  <%= f.radio_button :atmosphere_rating, 3 %>
-  <%= f.radio_button :atmosphere_rating, 4 %>
-  <%= f.radio_button :atmosphere_rating, 5 %>
+  <div class="stars">
+    <%= f.radio_button :atmosphere_rating, 5, class: :"star-atmosphere star-atmosphere-5", id: "star-atmosphere-5" %>
+    <label class="star-atmosphere star-atmosphere-5" for="star-atmosphere-5" ></label>
+    <%= f.radio_button :atmosphere_rating, 4, class: :"star-atmosphere star-atmosphere-4", id: "star-atmosphere-4"  %>
+    <label class="star-atmosphere star-atmosphere-4" for="star-atmosphere-4" ></label>
+    <%= f.radio_button :atmosphere_rating, 3, class: :"star-atmosphere star-atmosphere-3", id: "star-atmosphere-3"  %>
+    <label class="star-atmosphere star-atmosphere-3" for="star-atmosphere-3" ></label>
+    <%= f.radio_button :atmosphere_rating, 2, class: :"star-atmosphere star-atmosphere-2", id: "star-atmosphere-2"  %>
+    <label class="star-atmosphere star-atmosphere-2" for="star-atmosphere-2" ></label>
+    <%= f.radio_button :atmosphere_rating, 1, class: :"star-atmosphere star-atmosphere-1", id: "star-atmosphere-1"  %>
+    <label class="star-atmosphere star-atmosphere-1" for="star-atmosphere-1" ></label>
+  </div>
 
-  <%= f.label :comments %>
-  <%= f.text_area :comments, size: "60x12" %>
-  <%= f.submit "Add Review" %>
+  <% if @errors %>
+    <% if @review.errors[:atmosphere_rating][1]%>
+      <div class="add-review-errors">
+        <p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+        <%= @review.errors[:atmosphere_rating][1]%></p>
+      </div>
+      <% elsif @review.errors[:atmosphere_rating][0] %>
+      <div class="add-review-errors">
+        <p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+        <%= @review.errors[:atmosphere_rating][0]%></p>
+      </div>
+    <% end %>
+  <% end %>
 
-<% end %>
+    <%= f.label :comments %>
+      <% if @review.errors[:comments][0] %>
+        <div class="add-review-errors">
+          <p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+          <%= @review.errors[:comments][0] %></p>
+        </div>
+      <% end %>
+    <%= f.text_area :comments, size: "60x12" %>
+    <%= f.submit "Add Review" %>
+
+  <% end %>
+</div>
