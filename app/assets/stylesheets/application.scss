@@ -541,7 +541,7 @@ label.star-atmosphere:before {
 
 .profile-user{
   border-bottom: 2px solid $dark-green;
-
+}
 .loader {
     border: 16px solid #f3f3f3; /* Light grey */
     border-top: 16px solid $dark-green; /* Blue */
@@ -560,5 +560,4 @@ label.star-atmosphere:before {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-
 }
