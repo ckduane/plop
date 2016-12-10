@@ -1,3 +1,7 @@
+$(document).ready(function(){
+  $(".homepage").children().children().hide()
+})
+
 if (window.location.pathname === '/'){
 navigator.geolocation.getCurrentPosition(function(position) {
   var location = {lat: position.coords.latitude, long: position.coords.longitude}
@@ -8,9 +12,11 @@ navigator.geolocation.getCurrentPosition(function(position) {
   }).done(function(response){
     $(".container").html(response)
     setupTabs()
+    $(".loader").hide();
   })
 });
 }
+
 
 function setupTabs(){
   $(".index-sorts").children().hide()
