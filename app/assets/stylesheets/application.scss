@@ -342,7 +342,7 @@ textarea{
   width: 60%;
 }
 
-.add-review, .add-favorite, .favorited{
+.add-review, .add-favorite, .favorited, .review-links{
   background-color: $dark-green;
   text-align: center;
   color: white;
@@ -516,9 +516,35 @@ label.star-atmosphere:before {
   font-family: FontAwesome;
 }
 
+
+.profile {
+  display: flex;
+  flex-direction: row;
+}
+
+.profile-favorite {
+  width: 50%;
+}
+
+.profile-review {
+  width: 50%;
+}
+
+.review-links {
+  display: inline-block;
+  width: 100px;
+}
+
+.review-links a {
+  color: white;
+}
+
+.profile-user{
+  border-bottom: 2px solid $dark-green;
+
 .loader {
     border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid #3498db; /* Blue */
+    border-top: 16px solid $dark-green; /* Blue */
     border-radius: 50%;
     width: 100px;
     height: 100px;
@@ -534,4 +560,5 @@ label.star-atmosphere:before {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+
 }
