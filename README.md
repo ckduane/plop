@@ -16,7 +16,7 @@ Front End: Javascript, HTML, CSS
 APIs: Yelp Business and Search API
 
 ##Team
-Ori Nachassi
-Christine Duane
-Matthew Dimesky
-Keith James  
+Ori Nachassi  
+Christine Duane  
+Matthew Dimesky  
+Keith James   
