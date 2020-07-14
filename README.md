@@ -1,7 +1,5 @@
 # Plop
 
-[![plop-screenshot.jpg](https://s24.postimg.org/3ki1ewn8l/plop_screenshot.jpg)](https://postimg.org/image/k89jhei01/)
-
 ## Description
 An application to find spaces catered for the remote worker. Search for coffee shops in San Diego ranked by workability. Plop allows you to rate and find spaces based on their wifi, parking, seating, power outlets, and atmosphere.
 
