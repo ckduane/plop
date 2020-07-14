@@ -13,7 +13,7 @@ Back End: Ruby on Rails, ActiveRecord, PostgreSQL
 Front End: Javascript, HTML, CSS  
 APIs: Yelp Business and Search API
 
-##Team
+## Team
 Ori Nachassi  
 Christine Duane  
 Matthew Dimesky  
